@@ -1,0 +1,28 @@
+{
+  "name": "zver/array-helper",
+  "description": "Helps you to manipulate with arrays",
+  "keywords": [
+    "array",
+    "helper",
+    "zver",
+    "arrays"
+  ],
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "": "tests/"
+    }
+  },
+  "require": {
+  },
+  "require-dev": {
+    "codeception/codeception": "2.*",
+    "codeception/c3": "2.*",
+    "phpdocumentor/phpdocumentor": "2.*",
+    "cvuorinen/phpdoc-markdown-public": "*"
+  }
+}
