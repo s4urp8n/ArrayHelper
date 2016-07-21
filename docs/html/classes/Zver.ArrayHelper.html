@@ -120,6 +120,12 @@
             <i class="icon-custom icon-method"></i> Methods
             <ul>
                                                                                                     <li class="method public">
+        <a href="#method_column" title="column :: Get only one key column from multi-dimensional array">
+            <span class="description">Get only one key column from multi-dimensional array</span><pre>column</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
         <a href="#method_combine" title="combine :: Combined two array, keys and values by common associative key">
             <span class="description">Combined two array, keys and values by common associative key</span><pre>combine</pre>
         </a>
@@ -206,8 +212,8 @@ If called on empty array - exception will be thrown</span><pre>getFirstValue</pr
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_getFirstValueUnset" title="getFirstValueUnset :: ">
-            <span class="description"></span><pre>getFirstValueUnset</pre>
+        <a href="#method_getFirstValueUnset" title="getFirstValueUnset :: Return first value of array and removes it from array">
+            <span class="description">Return first value of array and removes it from array</span><pre>getFirstValueUnset</pre>
         </a>
     </li>
 
@@ -240,8 +246,8 @@ If called on empty array - exception will be thrown</span><pre>getLastValue</pre
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_getLastValueUnset" title="getLastValueUnset :: ">
-            <span class="description"></span><pre>getLastValueUnset</pre>
+        <a href="#method_getLastValueUnset" title="getLastValueUnset :: Return last value from array and removes it from array">
+            <span class="description">Return last value from array and removes it from array</span><pre>getLastValueUnset</pre>
         </a>
     </li>
 
@@ -326,8 +332,8 @@ If $strict is true it compares in strict mode === instead of ==</span><pre>isVal
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_offsetSet" title="offsetSet :: ">
-            <span class="description"></span><pre>offsetSet</pre>
+        <a href="#method_offsetSet" title="offsetSet :: Implementation of ArrayAccess">
+            <span class="description">Implementation of ArrayAccess</span><pre>offsetSet</pre>
         </a>
     </li>
 
@@ -395,11 +401,11 @@ If $strict is true it compares in strict mode === instead of ==</span><pre>isVal
         </li>
         <li class="nav-header protected">» Protected
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -435,7 +441,34 @@ If $strict is true it compares in strict mode === instead of ==</span><pre>isVal
                                                                                                                                                                                 </table>
 
                     <h3><i class="icon-custom icon-method"></i> Methods</h3>
-                                                                <a id="method_combine"></a>
+                                                                <a id="method_column"></a>
+                        <div class="element clickable method public  method_column" data-toggle="collapse" data-target=".method_column .collapse">
+                            <h2>Get only one key column from multi-dimensional array</h2>
+                            <pre>column(string $column) : \Zver\ArrayHelper</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$column</h4>
+                                                <code>string</code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/Zver.ArrayHelper.html">\Zver\ArrayHelper</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_combine"></a>
                         <div class="element clickable method public  method_combine" data-toggle="collapse" data-target=".method_combine .collapse">
                             <h2>Combined two array, keys and values by common associative key</h2>
                             <pre>combine(array $keys, array $values) : \Zver\ArrayHelper</pre>
@@ -884,8 +917,8 @@ If called on empty array - exception will be thrown</h2>
                         </div>
                                             <a id="method_getFirstValueUnset"></a>
                         <div class="element clickable method public  method_getFirstValueUnset" data-toggle="collapse" data-target=".method_getFirstValueUnset .collapse">
-                            <h2>getFirstValueUnset</h2>
-                            <pre>getFirstValueUnset() </pre>
+                            <h2>Return first value of array and removes it from array</h2>
+                            <pre>getFirstValueUnset() : mixed</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -897,9 +930,11 @@ If called on empty array - exception will be thrown</h2>
                                     <table class="table">
                                                                                     <tr>
                                                 <th>
-                                                    
+                                                    throws
                                                 </th>
                                                 <td>
+                                                                                                                                                                        
+                                                                                                                                                                        
                                                                                                     </td>
                                             </tr>
                                                                                     <tr>
@@ -912,6 +947,8 @@ If called on empty array - exception will be thrown</h2>
                                                                             </table>
 
                                     
+                                                                            <h3>Response</h3>
+                                        <code>mixed</code><p></p>
                                                                     </div>
                             </div>
 
@@ -1036,8 +1073,8 @@ If called on empty array - exception will be thrown</h2>
                         </div>
                                             <a id="method_getLastValueUnset"></a>
                         <div class="element clickable method public  method_getLastValueUnset" data-toggle="collapse" data-target=".method_getLastValueUnset .collapse">
-                            <h2>getLastValueUnset</h2>
-                            <pre>getLastValueUnset() </pre>
+                            <h2>Return last value from array and removes it from array</h2>
+                            <pre>getLastValueUnset() : mixed</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -1049,9 +1086,11 @@ If called on empty array - exception will be thrown</h2>
                                     <table class="table">
                                                                                     <tr>
                                                 <th>
-                                                    
+                                                    throws
                                                 </th>
                                                 <td>
+                                                                                                                                                                        
+                                                                                                                                                                        
                                                                                                     </td>
                                             </tr>
                                                                                     <tr>
@@ -1064,6 +1103,8 @@ If called on empty array - exception will be thrown</h2>
                                                                             </table>
 
                                     
+                                                                            <h3>Response</h3>
+                                        <code>mixed</code><p></p>
                                                                     </div>
                             </div>
 
@@ -1488,8 +1529,8 @@ No recursion.</p></div>
                         </div>
                                             <a id="method_offsetSet"></a>
                         <div class="element clickable method public  method_offsetSet" data-toggle="collapse" data-target=".method_offsetSet .collapse">
-                            <h2>offsetSet</h2>
-                            <pre>offsetSet( $offset, mixed $value) </pre>
+                            <h2>Implementation of ArrayAccess</h2>
+                            <pre>offsetSet(mixed $offset, mixed $value) </pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
 
@@ -1511,7 +1552,7 @@ No recursion.</p></div>
                                                                             <h3>Arguments</h3>
                                                                                     <div class="subelement argument">
                                                 <h4>$offset</h4>
-                                                <code></code><p></p>
+                                                <code>mixed</code><p></p>
                                             </div>
                                                                                     <div class="subelement argument">
                                                 <h4>$value</h4>
@@ -1889,7 +1930,7 @@ $arr-&gt;set([2,3]);</p>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Thu, 23 Jun 2016 12:34:19 +0300.<br/>
+            generated on Fri, 22 Jul 2016 01:00:30 +0300.<br/>
     </footer>
     </body>
 </html>

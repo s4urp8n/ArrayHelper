@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1466674440">
-  <project timestamp="1466674440">
+<coverage generated="1469138241">
+  <project timestamp="1469138241">
     <package name="Zver">
       <file name="C:\OpenServer\domains\array-helper\src\Zver/ArrayHelper.php">
         <class name="ArrayHelper" namespace="Zver" fullPackage="Zver" package="Zver">
-          <metrics complexity="96" methods="44" coveredmethods="44" conditionals="0" coveredconditionals="0" statements="198" coveredstatements="198" elements="242" coveredelements="242"/>
+          <metrics complexity="101" methods="45" coveredmethods="45" conditionals="0" coveredconditionals="0" statements="212" coveredstatements="212" elements="257" coveredelements="257"/>
         </class>
-        <line num="29" type="method" name="__construct" visibility="private" complexity="1" crap="1" count="33"/>
-        <line num="31" type="stmt" count="33"/>
-        <line num="32" type="stmt" count="33"/>
+        <line num="29" type="method" name="__construct" visibility="private" complexity="1" crap="1" count="35"/>
+        <line num="31" type="stmt" count="35"/>
+        <line num="32" type="stmt" count="35"/>
         <line num="59" type="method" name="range" visibility="public" complexity="1" crap="1" count="1"/>
         <line num="61" type="stmt" count="1"/>
-        <line num="79" type="method" name="load" visibility="public" complexity="1" crap="1" count="33"/>
-        <line num="81" type="stmt" count="33"/>
+        <line num="79" type="method" name="load" visibility="public" complexity="1" crap="1" count="35"/>
+        <line num="81" type="stmt" count="35"/>
         <line num="93" type="method" name="explode" visibility="public" complexity="1" crap="1" count="1"/>
         <line num="95" type="stmt" count="1"/>
         <line num="136" type="method" name="combine" visibility="public" complexity="4" crap="4" count="1"/>
@@ -59,9 +59,9 @@
         <line num="262" type="stmt" count="5"/>
         <line num="274" type="method" name="replaceArray" visibility="public" complexity="1" crap="1" count="3"/>
         <line num="276" type="stmt" count="3"/>
-        <line num="296" type="method" name="set" visibility="public" complexity="1" crap="1" count="5"/>
-        <line num="298" type="stmt" count="5"/>
-        <line num="300" type="stmt" count="5"/>
+        <line num="296" type="method" name="set" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="298" type="stmt" count="7"/>
+        <line num="300" type="stmt" count="7"/>
         <line num="308" type="method" name="reverse" visibility="public" complexity="1" crap="1" count="2"/>
         <line num="310" type="stmt" count="2"/>
         <line num="311" type="stmt" count="2"/>
@@ -85,8 +85,8 @@
         <line num="355" type="stmt" count="3"/>
         <line num="363" type="method" name="getKeys" visibility="public" complexity="1" crap="1" count="9"/>
         <line num="365" type="stmt" count="9"/>
-        <line num="373" type="method" name="getValues" visibility="public" complexity="1" crap="1" count="14"/>
-        <line num="375" type="stmt" count="14"/>
+        <line num="373" type="method" name="getValues" visibility="public" complexity="1" crap="1" count="16"/>
+        <line num="375" type="stmt" count="16"/>
         <line num="378" type="method" name="getLastValueUnset" visibility="public" complexity="2" crap="2" count="2"/>
         <line num="380" type="stmt" count="2"/>
         <line num="381" type="stmt" count="2"/>
@@ -133,10 +133,10 @@
         <line num="497" type="stmt" count="1"/>
         <line num="506" type="method" name="getArray" visibility="public" complexity="1" crap="1" count="14"/>
         <line num="508" type="stmt" count="14"/>
-        <line num="520" type="method" name="setArray" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="522" type="stmt" count="1"/>
-        <line num="530" type="method" name="get" visibility="public" complexity="1" crap="1" count="17"/>
-        <line num="532" type="stmt" count="17"/>
+        <line num="520" type="method" name="setArray" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="522" type="stmt" count="3"/>
+        <line num="530" type="method" name="get" visibility="public" complexity="1" crap="1" count="19"/>
+        <line num="532" type="stmt" count="19"/>
         <line num="541" type="method" name="getLength" visibility="public" complexity="1" crap="1" count="1"/>
         <line num="543" type="stmt" count="1"/>
         <line num="551" type="method" name="count" visibility="public" complexity="1" crap="1" count="3"/>
@@ -260,7 +260,22 @@
         <line num="847" type="stmt" count="1"/>
         <line num="848" type="stmt" count="1"/>
         <line num="850" type="stmt" count="1"/>
-        <metrics loc="853" ncloc="474" classes="1" methods="44" coveredmethods="44" conditionals="0" coveredconditionals="0" statements="210" coveredstatements="210" elements="254" coveredelements="254"/>
+        <line num="853" type="method" name="column" visibility="public" complexity="5" crap="5" count="2"/>
+        <line num="855" type="stmt" count="2"/>
+        <line num="857" type="stmt" count="2"/>
+        <line num="859" type="stmt" count="2"/>
+        <line num="860" type="stmt" count="2"/>
+        <line num="862" type="stmt" count="2"/>
+        <line num="864" type="stmt" count="2"/>
+        <line num="865" type="stmt" count="2"/>
+        <line num="866" type="stmt" count="2"/>
+        <line num="867" type="stmt" count="2"/>
+        <line num="868" type="stmt" count="2"/>
+        <line num="869" type="stmt" count="2"/>
+        <line num="870" type="stmt" count="2"/>
+        <line num="872" type="stmt" count="2"/>
+        <line num="873" type="stmt" count="2"/>
+        <metrics loc="876" ncloc="497" classes="1" methods="45" coveredmethods="45" conditionals="0" coveredconditionals="0" statements="224" coveredstatements="224" elements="269" coveredelements="269"/>
       </file>
     </package>
     <package name="Zver\Exceptions\ArrayHelper">
@@ -277,6 +292,6 @@
         <metrics loc="9" ncloc="9" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
       </file>
     </package>
-    <metrics files="3" loc="871" ncloc="492" classes="3" methods="44" coveredmethods="44" conditionals="0" coveredconditionals="0" statements="210" coveredstatements="210" elements="254" coveredelements="254"/>
+    <metrics files="3" loc="894" ncloc="515" classes="3" methods="45" coveredmethods="45" conditionals="0" coveredconditionals="0" statements="224" coveredstatements="224" elements="269" coveredelements="269"/>
   </project>
 </coverage>

@@ -1499,4 +1499,169 @@ class ArrayHelperCest
         }
     }
     
+    public function columnTest(UnitTester $I)
+    {
+        $original = [
+            ['key' => 1, 'key2' => 25],
+            ['key' => 2, 'key2' => 2435],
+            ['key' => 3, 'key52' => 2123],
+            ['key' => 4, 'key22' => 244],
+            ['key' => 5, 'key42' => 233],
+            ['key' => 6, 'key22' => 2333],
+            ['key' => 7, 'key22' => 2667],
+        ];
+        
+        $array = ArrayHelper::load($original);
+        
+        $I->assertSame(
+            $array->get(), $original
+        );
+        
+        $I->assertSame(
+            $array->column('key')
+                  ->get(), [1, 2, 3, 4, 5, 6, 7]
+        );
+        
+        $I->assertNotSame(
+            $array->get(), $original
+        );
+        
+        $I->assertSame(
+            ArrayHelper::load($original)
+                       ->column('key2')
+                       ->get(), [25, 2435]
+        );
+        
+        $I->assertSame(
+            ArrayHelper::load($original)
+                       ->column('key888888')
+                       ->get(), []
+        );
+        
+        $I->assertSame(
+            ArrayHelper::load($original)
+                       ->column('key22')
+                       ->get(), [244, 2333, 2667]
+        );
+        
+        $I->assertSame(
+            ArrayHelper::load($original)
+                       ->column('key22')
+                       ->column('key')
+                       ->get(), []
+        );
+        
+        $I->assertSame(
+            ArrayHelper::load($original)
+                       ->column('key22')
+                       ->column('key')
+                       ->column('key')
+                       ->column('key')
+                       ->column('key')
+                       ->column('key')
+                       ->column('key')
+                       ->column('key')
+                       ->column('key')
+                       ->column('key')
+                       ->column('key')
+                       ->column('key')
+                       ->column('key')
+                       ->column('key')
+                       ->column('key')
+                       ->get(), []
+        );
+    }
+    
+    public function multiColumnTest(UnitTester $I)
+    {
+        $original = [
+            [
+                'key'  => [
+                    'key' => [
+                        'key' => 1,
+                    ],
+                ],
+                'key2' => 25,
+            ],
+            [
+                'key'  => [
+                    'key' => [
+                        'key' => 1,
+                    ],
+                ],
+                'key2' => 2435,
+            ],
+            [
+                'key'   => [
+                    'key' => [
+                        'key' => 1,
+                    ],
+                ],
+                'key52' => 2123,
+            ],
+            [
+                'key'   => [
+                    'key' => [
+                        'key' => 1,
+                    ],
+                ],
+                'key22' => 244,
+            ],
+            [
+                'key'   => [
+                    'key' => [
+                        'key' => 1,
+                    ],
+                ],
+                'key42' => 233,
+            ],
+            [
+                'key'   => [
+                    'key' => [
+                        'key2' => 2,
+                    ],
+                ],
+                'key22' => 2333,
+            ],
+            [
+                'key'   => [
+                    'key' => [
+                        'key' => 1,
+                    ],
+                ],
+                'key22' => 2667,
+            ],
+        ];
+        
+        $I->assertSame(
+            ArrayHelper::load($original)
+                       ->column('key')
+                       ->column('key')
+                       ->column('key')
+                       ->get(), [1, 1, 1, 1, 1, 1]
+        );
+        
+        $I->assertSame(
+            ArrayHelper::load($original)
+                       ->column('key')
+                       ->column('key')
+                       ->column('key2')
+                       ->get(), [2]
+        );
+        
+        $I->assertSame(
+            ArrayHelper::load($original)
+                       ->column('key22')
+                       ->get(), [244, 2333, 2667]
+        );
+        
+        $I->assertSame(
+            ArrayHelper::load($original)
+                       ->column('key22')
+                       ->column('ddwd')
+                       ->get(), []
+        );
+        
+    }
+    
 }

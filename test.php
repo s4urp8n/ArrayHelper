@@ -1,6 +1,5 @@
 <?php
 
-$webServerHandle = null;
 $codeceptionStatus = null;
 $config = include 'tests' . DIRECTORY_SEPARATOR . 'config.php';
 
@@ -21,20 +20,6 @@ $commands = [
         'description' => 'Changing directory to ' . __DIR__ . ' and turning on implicit flush...',
     ],
     [
-        'description' => 'Running build-in WEB-server...',
-        'callback'    => function () use ($config, &$webServerHandle)
-        {
-            $pipes = [];
-            $descriptorspec = array(
-                0 => array("pipe", "r"),
-                1 => array("pipe", "w"),
-                2 => array("pipe", "w"),
-            );
-
-            $webServerHandle = proc_open('php -S ' . $config['server'], $descriptorspec, $pipes);
-        },
-    ],
-    [
         'description' => 'Testing...',
         'callback'    => function () use (&$codeceptionStatus)
         {
@@ -42,13 +27,6 @@ $commands = [
                        . DIRECTORY_SEPARATOR
                        . "codecept run --coverage --coverage-xml --coverage-html --coverage-text --fail-fast";
             passthru($command, $codeceptionStatus);
-        },
-    ],
-    [
-        'description' => 'Terminating build-in WEB-server...',
-        'callback'    => function () use (&$webServerHandle)
-        {
-            proc_terminate($webServerHandle);
         },
     ],
     [

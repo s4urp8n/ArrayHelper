@@ -38,6 +38,8 @@ $coverage->setData(array (
       30 => 'ArrayHelperCest:explodeTest',
       31 => 'ArrayHelperCest:mapTest',
       32 => 'ArrayHelperCest:filterTest',
+      33 => 'ArrayHelperCest:columnTest',
+      34 => 'ArrayHelperCest:multiColumnTest',
     ),
     32 => 
     array (
@@ -74,6 +76,8 @@ $coverage->setData(array (
       30 => 'ArrayHelperCest:explodeTest',
       31 => 'ArrayHelperCest:mapTest',
       32 => 'ArrayHelperCest:filterTest',
+      33 => 'ArrayHelperCest:columnTest',
+      34 => 'ArrayHelperCest:multiColumnTest',
     ),
     61 => 
     array (
@@ -115,6 +119,8 @@ $coverage->setData(array (
       30 => 'ArrayHelperCest:explodeTest',
       31 => 'ArrayHelperCest:mapTest',
       32 => 'ArrayHelperCest:filterTest',
+      33 => 'ArrayHelperCest:columnTest',
+      34 => 'ArrayHelperCest:multiColumnTest',
     ),
     82 => NULL,
     95 => 
@@ -333,6 +339,8 @@ $coverage->setData(array (
       2 => 'ArrayHelperCest:firstKeyUnset',
       3 => 'ArrayHelperCest:lastKeyUnset',
       4 => 'ArrayHelperCest:splitPartsTest',
+      5 => 'ArrayHelperCest:columnTest',
+      6 => 'ArrayHelperCest:multiColumnTest',
     ),
     300 => 
     array (
@@ -341,6 +349,8 @@ $coverage->setData(array (
       2 => 'ArrayHelperCest:firstKeyUnset',
       3 => 'ArrayHelperCest:lastKeyUnset',
       4 => 'ArrayHelperCest:splitPartsTest',
+      5 => 'ArrayHelperCest:columnTest',
+      6 => 'ArrayHelperCest:multiColumnTest',
     ),
     301 => NULL,
     310 => 
@@ -481,6 +491,8 @@ $coverage->setData(array (
       11 => 'ArrayHelperCest:exceptionsTest',
       12 => 'ArrayHelperCest:firstKeyUnset',
       13 => 'ArrayHelperCest:lastKeyUnset',
+      14 => 'ArrayHelperCest:columnTest',
+      15 => 'ArrayHelperCest:multiColumnTest',
     ),
     376 => NULL,
     380 => 
@@ -704,6 +716,8 @@ $coverage->setData(array (
     522 => 
     array (
       0 => 'ArrayHelperCest:loadReloadTest',
+      1 => 'ArrayHelperCest:columnTest',
+      2 => 'ArrayHelperCest:multiColumnTest',
     ),
     523 => NULL,
     532 => 
@@ -725,6 +739,8 @@ $coverage->setData(array (
       14 => 'ArrayHelperCest:explodeTest',
       15 => 'ArrayHelperCest:mapTest',
       16 => 'ArrayHelperCest:filterTest',
+      17 => 'ArrayHelperCest:columnTest',
+      18 => 'ArrayHelperCest:multiColumnTest',
     ),
     533 => NULL,
     543 => 
@@ -1180,6 +1196,77 @@ $coverage->setData(array (
       0 => 'ArrayHelperCest:filterTest',
     ),
     851 => NULL,
+    855 => 
+    array (
+      0 => 'ArrayHelperCest:columnTest',
+      1 => 'ArrayHelperCest:multiColumnTest',
+    ),
+    857 => 
+    array (
+      0 => 'ArrayHelperCest:columnTest',
+      1 => 'ArrayHelperCest:multiColumnTest',
+    ),
+    859 => 
+    array (
+      0 => 'ArrayHelperCest:columnTest',
+      1 => 'ArrayHelperCest:multiColumnTest',
+    ),
+    860 => 
+    array (
+      0 => 'ArrayHelperCest:columnTest',
+      1 => 'ArrayHelperCest:multiColumnTest',
+    ),
+    862 => 
+    array (
+      0 => 'ArrayHelperCest:columnTest',
+      1 => 'ArrayHelperCest:multiColumnTest',
+    ),
+    864 => 
+    array (
+      0 => 'ArrayHelperCest:columnTest',
+      1 => 'ArrayHelperCest:multiColumnTest',
+    ),
+    865 => 
+    array (
+      0 => 'ArrayHelperCest:columnTest',
+      1 => 'ArrayHelperCest:multiColumnTest',
+    ),
+    866 => 
+    array (
+      0 => 'ArrayHelperCest:columnTest',
+      1 => 'ArrayHelperCest:multiColumnTest',
+    ),
+    867 => 
+    array (
+      0 => 'ArrayHelperCest:columnTest',
+      1 => 'ArrayHelperCest:multiColumnTest',
+    ),
+    868 => 
+    array (
+      0 => 'ArrayHelperCest:columnTest',
+      1 => 'ArrayHelperCest:multiColumnTest',
+    ),
+    869 => 
+    array (
+      0 => 'ArrayHelperCest:columnTest',
+      1 => 'ArrayHelperCest:multiColumnTest',
+    ),
+    870 => 
+    array (
+      0 => 'ArrayHelperCest:columnTest',
+      1 => 'ArrayHelperCest:multiColumnTest',
+    ),
+    872 => 
+    array (
+      0 => 'ArrayHelperCest:columnTest',
+      1 => 'ArrayHelperCest:multiColumnTest',
+    ),
+    873 => 
+    array (
+      0 => 'ArrayHelperCest:columnTest',
+      1 => 'ArrayHelperCest:multiColumnTest',
+    ),
+    874 => NULL,
   ),
   'C:\\OpenServer\\domains\\array-helper\\src\\Zver\\Exceptions\\ArrayHelper\\UndefinedOffsetException.php' => 
   array (
@@ -1360,6 +1447,16 @@ $coverage->setTests(array (
     'status' => NULL,
   ),
   'ArrayHelperCest:filterTest' => 
+  array (
+    'size' => 'unknown',
+    'status' => NULL,
+  ),
+  'ArrayHelperCest:columnTest' => 
+  array (
+    'size' => 'unknown',
+    'status' => NULL,
+  ),
+  'ArrayHelperCest:multiColumnTest' => 
   array (
     'size' => 'unknown',
     'status' => NULL,

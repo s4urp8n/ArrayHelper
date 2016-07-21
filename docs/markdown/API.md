@@ -45,6 +45,7 @@
     * [offsetUnset](#offsetunset)
     * [map](#map)
     * [filter](#filter)
+    * [column](#column)
 * [EmptyArrayException](#emptyarrayexception)
 * [UndefinedOffsetException](#undefinedoffsetexception)
 
@@ -368,10 +369,10 @@ ArrayHelper::getValues(  ): array
 
 ### getLastValueUnset
 
-
+Return last value from array and removes it from array
 
 ```php
-ArrayHelper::getLastValueUnset(  )
+ArrayHelper::getLastValueUnset(  ): mixed
 ```
 
 
@@ -434,10 +435,10 @@ ArrayHelper::getLastKey(  ): mixed
 
 ### getFirstValueUnset
 
-
+Return first value of array and removes it from array
 
 ```php
-ArrayHelper::getFirstValueUnset(  )
+ArrayHelper::getFirstValueUnset(  ): mixed
 ```
 
 
@@ -813,10 +814,10 @@ ArrayHelper::offsetGet( mixed $offset ): mixed|null
 
 ### offsetSet
 
-
+Implementation of ArrayAccess
 
 ```php
-ArrayHelper::offsetSet(  $offset, mixed $value )
+ArrayHelper::offsetSet( mixed $offset, mixed $value )
 ```
 
 
@@ -826,7 +827,7 @@ ArrayHelper::offsetSet(  $offset, mixed $value )
 
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `$offset` | **** |  |
+| `$offset` | **mixed** |  |
 | `$value` | **mixed** |  |
 
 
@@ -902,6 +903,28 @@ No recursion.
 
 ---
 
+### column
+
+Get only one key column from multi-dimensional array
+
+```php
+ArrayHelper::column( string $column ): \Zver\ArrayHelper
+```
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$column` | **string** |  |
+
+
+
+
+---
+
 ## EmptyArrayException
 
 
@@ -925,4 +948,4 @@ No recursion.
 
 
 --------
-> This document was automatically generated from source code comments on 2016-06-23 using [phpDocumentor](http://www.phpdoc.org/) and [cvuorinen/phpdoc-markdown-public](https://github.com/cvuorinen/phpdoc-markdown-public)
+> This document was automatically generated from source code comments on 2016-07-22 using [phpDocumentor](http://www.phpdoc.org/) and [cvuorinen/phpdoc-markdown-public](https://github.com/cvuorinen/phpdoc-markdown-public)

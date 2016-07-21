@@ -375,6 +375,12 @@ namespace Zver
             return array_values($this->array);
         }
         
+        /**
+         * Return last value from array and removes it from array
+         *
+         * @return mixed
+         * @throws \Zver\Exceptions\ArrayHelper\EmptyArrayException
+         */
         public function getLastValueUnset()
         {
             if ($this->isEmpty())
@@ -434,6 +440,12 @@ namespace Zver
                          ->getLastValue();
         }
         
+        /**
+         * Return first value of array and removes it from array
+         *
+         * @return mixed
+         * @throws \Zver\Exceptions\ArrayHelper\EmptyArrayException
+         */
         public function getFirstValueUnset()
         {
             if ($this->isEmpty())
@@ -783,8 +795,9 @@ namespace Zver
         }
         
         /**
-         * @param mixed $offse
          * Implementation of ArrayAccess
+         *
+         * @param mixed $offset
          * @param mixed $value
          */
         public function offsetSet($offset, $value)
@@ -848,6 +861,36 @@ namespace Zver
             }
             
             return $this;
+        }
+        
+        /**
+         * Get only one key column from multi-dimensional array
+         *
+         * @param string $column
+         *
+         * @return \Zver\ArrayHelper
+         */
+        public function column($column)
+        {
+            $columnArray = [];
+            
+            foreach ($this->array as $values)
+            {
+                if (is_array($values))
+                {
+                    
+                    foreach ($values as $key => $value)
+                    {
+                        if ($key == $column)
+                        {
+                            $columnArray[] = $value;
+                        }
+                    }
+                }
+            }
+            
+            return $this->setArray($columnArray)
+                        ->setArray($this->getValues());
         }
     }
 }
