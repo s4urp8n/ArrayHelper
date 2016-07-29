@@ -270,6 +270,18 @@ If called on empty array - exception will be thrown</span><pre>getLastValue</pre
     </li>
 
                                                                                                         <li class="method public">
+        <a href="#method_insertFirst" title="insertFirst :: Insert element into beginning of array">
+            <span class="description">Insert element into beginning of array</span><pre>insertFirst</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_insertLast" title="insertLast :: Insert element into end of array">
+            <span class="description">Insert element into end of array</span><pre>insertLast</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
         <a href="#method_isEmpty" title="isEmpty :: Returns true if loaded array have no elements, false otherwise">
             <span class="description">Returns true if loaded array have no elements, false otherwise</span><pre>isEmpty</pre>
         </a>
@@ -386,6 +398,12 @@ If $strict is true it compares in strict mode === instead of ==</span><pre>isVal
     </li>
 
                                                                                                         <li class="method public">
+        <a href="#method_slice" title="slice :: Get $length number of elements started from $offset">
+            <span class="description">Get $length number of elements started from $offset</span><pre>slice</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
         <a href="#method_splitParts" title="splitParts :: Split array to $numberOfParts parts">
             <span class="description">Split array to $numberOfParts parts</span><pre>splitParts</pre>
         </a>
@@ -401,11 +419,11 @@ If $strict is true it compares in strict mode === instead of ==</span><pre>isVal
         </li>
         <li class="nav-header protected">» Protected
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
@@ -1223,6 +1241,60 @@ If called on empty array - exception will be thrown</h2>
                             </div>
 
                         </div>
+                                            <a id="method_insertFirst"></a>
+                        <div class="element clickable method public  method_insertFirst" data-toggle="collapse" data-target=".method_insertFirst .collapse">
+                            <h2>Insert element into beginning of array</h2>
+                            <pre>insertFirst( $element) : \Zver\ArrayHelper</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$element</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/Zver.ArrayHelper.html">\Zver\ArrayHelper</a></code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_insertLast"></a>
+                        <div class="element clickable method public  method_insertLast" data-toggle="collapse" data-target=".method_insertLast .collapse">
+                            <h2>Insert element into end of array</h2>
+                            <pre>insertLast( $element) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$element</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
                                             <a id="method_isEmpty"></a>
                         <div class="element clickable method public  method_isEmpty" data-toggle="collapse" data-target=".method_isEmpty .collapse">
                             <h2>Returns true if loaded array have no elements, false otherwise</h2>
@@ -1846,6 +1918,37 @@ $arr-&gt;set([2,3]);</p>
                             </div>
 
                         </div>
+                                            <a id="method_slice"></a>
+                        <div class="element clickable method public  method_slice" data-toggle="collapse" data-target=".method_slice .collapse">
+                            <h2>Get $length number of elements started from $offset</h2>
+                            <pre>slice( $offset,  $length) : $this</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$offset</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$length</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>$this</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
                                             <a id="method_splitParts"></a>
                         <div class="element clickable method public  method_splitParts" data-toggle="collapse" data-target=".method_splitParts .collapse">
                             <h2>Split array to $numberOfParts parts</h2>
@@ -1930,7 +2033,7 @@ $arr-&gt;set([2,3]);</p>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Fri, 22 Jul 2016 01:00:30 +0300.<br/>
+            generated on Fri, 29 Jul 2016 04:09:15 +0300.<br/>
     </footer>
     </body>
 </html>

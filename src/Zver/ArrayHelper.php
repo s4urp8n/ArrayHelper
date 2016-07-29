@@ -892,5 +892,46 @@ namespace Zver
             return $this->setArray($columnArray)
                         ->setArray($this->getValues());
         }
+        
+        /**
+         * Insert element into beginning of array
+         *
+         * @param $element
+         *
+         * @return \Zver\ArrayHelper
+         */
+        public function insertFirst($element)
+        {
+            return $this->setArray(array_merge([$element], $this->array));
+        }
+        
+        /**
+         * Insert element into end of array
+         *
+         * @param $element
+         *
+         * @return $this
+         */
+        public function insertLast($element)
+        {
+            $this->array[] = $element;
+            
+            return $this;
+        }
+        
+        /**
+         * Get $length number of elements started from $offset
+         *
+         * @param $offset
+         * @param $length
+         *
+         * @return $this
+         */
+        public function slice($offset, $length)
+        {
+            $this->array = array_slice($this->array, $offset, $length, true);
+            
+            return $this;
+        }
     }
 }

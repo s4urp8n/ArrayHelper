@@ -46,6 +46,9 @@
     * [map](#map)
     * [filter](#filter)
     * [column](#column)
+    * [insertFirst](#insertfirst)
+    * [insertLast](#insertlast)
+    * [slice](#slice)
 * [EmptyArrayException](#emptyarrayexception)
 * [UndefinedOffsetException](#undefinedoffsetexception)
 
@@ -925,6 +928,73 @@ ArrayHelper::column( string $column ): \Zver\ArrayHelper
 
 ---
 
+### insertFirst
+
+Insert element into beginning of array
+
+```php
+ArrayHelper::insertFirst(  $element ): \Zver\ArrayHelper
+```
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$element` | **** |  |
+
+
+
+
+---
+
+### insertLast
+
+Insert element into end of array
+
+```php
+ArrayHelper::insertLast(  $element ): $this
+```
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$element` | **** |  |
+
+
+
+
+---
+
+### slice
+
+Get $length number of elements started from $offset
+
+```php
+ArrayHelper::slice(  $offset,  $length ): $this
+```
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$offset` | **** |  |
+| `$length` | **** |  |
+
+
+
+
+---
+
 ## EmptyArrayException
 
 
@@ -948,4 +1018,4 @@ ArrayHelper::column( string $column ): \Zver\ArrayHelper
 
 
 --------
-> This document was automatically generated from source code comments on 2016-07-22 using [phpDocumentor](http://www.phpdoc.org/) and [cvuorinen/phpdoc-markdown-public](https://github.com/cvuorinen/phpdoc-markdown-public)
+> This document was automatically generated from source code comments on 2016-07-29 using [phpDocumentor](http://www.phpdoc.org/) and [cvuorinen/phpdoc-markdown-public](https://github.com/cvuorinen/phpdoc-markdown-public)

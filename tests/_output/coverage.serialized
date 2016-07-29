@@ -40,6 +40,8 @@ $coverage->setData(array (
       32 => 'ArrayHelperCest:filterTest',
       33 => 'ArrayHelperCest:columnTest',
       34 => 'ArrayHelperCest:multiColumnTest',
+      35 => 'ArrayHelperCest:sliceTest',
+      36 => 'ArrayHelperCest:insertFirstLastTest',
     ),
     32 => 
     array (
@@ -78,6 +80,8 @@ $coverage->setData(array (
       32 => 'ArrayHelperCest:filterTest',
       33 => 'ArrayHelperCest:columnTest',
       34 => 'ArrayHelperCest:multiColumnTest',
+      35 => 'ArrayHelperCest:sliceTest',
+      36 => 'ArrayHelperCest:insertFirstLastTest',
     ),
     61 => 
     array (
@@ -121,6 +125,8 @@ $coverage->setData(array (
       32 => 'ArrayHelperCest:filterTest',
       33 => 'ArrayHelperCest:columnTest',
       34 => 'ArrayHelperCest:multiColumnTest',
+      35 => 'ArrayHelperCest:sliceTest',
+      36 => 'ArrayHelperCest:insertFirstLastTest',
     ),
     82 => NULL,
     95 => 
@@ -341,6 +347,8 @@ $coverage->setData(array (
       4 => 'ArrayHelperCest:splitPartsTest',
       5 => 'ArrayHelperCest:columnTest',
       6 => 'ArrayHelperCest:multiColumnTest',
+      7 => 'ArrayHelperCest:sliceTest',
+      8 => 'ArrayHelperCest:insertFirstLastTest',
     ),
     300 => 
     array (
@@ -351,6 +359,8 @@ $coverage->setData(array (
       4 => 'ArrayHelperCest:splitPartsTest',
       5 => 'ArrayHelperCest:columnTest',
       6 => 'ArrayHelperCest:multiColumnTest',
+      7 => 'ArrayHelperCest:sliceTest',
+      8 => 'ArrayHelperCest:insertFirstLastTest',
     ),
     301 => NULL,
     310 => 
@@ -495,35 +505,35 @@ $coverage->setData(array (
       15 => 'ArrayHelperCest:multiColumnTest',
     ),
     376 => NULL,
-    380 => 
-    array (
-      0 => 'ArrayHelperCest:exceptionsTest',
-      1 => 'ArrayHelperCest:lastKeyUnset',
-    ),
-    381 => 
-    array (
-      0 => 'ArrayHelperCest:exceptionsTest',
-      1 => 'ArrayHelperCest:lastKeyUnset',
-    ),
-    382 => 
-    array (
-      0 => 'ArrayHelperCest:exceptionsTest',
-    ),
-    383 => NULL,
-    385 => 
-    array (
-      0 => 'ArrayHelperCest:lastKeyUnset',
-    ),
     386 => 
     array (
-      0 => 'ArrayHelperCest:lastKeyUnset',
+      0 => 'ArrayHelperCest:exceptionsTest',
+      1 => 'ArrayHelperCest:lastKeyUnset',
+    ),
+    387 => 
+    array (
+      0 => 'ArrayHelperCest:exceptionsTest',
+      1 => 'ArrayHelperCest:lastKeyUnset',
     ),
     388 => 
     array (
-      0 => 'ArrayHelperCest:lastKeyUnset',
+      0 => 'ArrayHelperCest:exceptionsTest',
     ),
     389 => NULL,
-    398 => 
+    391 => 
+    array (
+      0 => 'ArrayHelperCest:lastKeyUnset',
+    ),
+    392 => 
+    array (
+      0 => 'ArrayHelperCest:lastKeyUnset',
+    ),
+    394 => 
+    array (
+      0 => 'ArrayHelperCest:lastKeyUnset',
+    ),
+    395 => NULL,
+    404 => 
     array (
       0 => 'ArrayHelperCest:getAtTest',
       1 => 'ArrayHelperCest:emptyTest',
@@ -535,167 +545,167 @@ $coverage->setData(array (
       7 => 'ArrayHelperCest:firstKeyUnset',
       8 => 'ArrayHelperCest:lastKeyUnset',
     ),
-    399 => NULL,
-    409 => 
-    array (
-      0 => 'ArrayHelperCest:getLastKeyTest',
-      1 => 'ArrayHelperCest:getLastValueTest',
-      2 => 'ArrayHelperCest:exceptionsTest',
-      3 => 'ArrayHelperCest:lastKeyUnset',
-    ),
-    410 => 
-    array (
-      0 => 'ArrayHelperCest:getLastKeyTest',
-      1 => 'ArrayHelperCest:getLastValueTest',
-      2 => 'ArrayHelperCest:exceptionsTest',
-      3 => 'ArrayHelperCest:lastKeyUnset',
-    ),
-    411 => 
-    array (
-      0 => 'ArrayHelperCest:exceptionsTest',
-    ),
-    412 => NULL,
-    414 => 
-    array (
-      0 => 'ArrayHelperCest:getLastKeyTest',
-      1 => 'ArrayHelperCest:getLastValueTest',
-      2 => 'ArrayHelperCest:lastKeyUnset',
-    ),
+    405 => NULL,
     415 => 
     array (
       0 => 'ArrayHelperCest:getLastKeyTest',
       1 => 'ArrayHelperCest:getLastValueTest',
-      2 => 'ArrayHelperCest:lastKeyUnset',
+      2 => 'ArrayHelperCest:exceptionsTest',
+      3 => 'ArrayHelperCest:lastKeyUnset',
+    ),
+    416 => 
+    array (
+      0 => 'ArrayHelperCest:getLastKeyTest',
+      1 => 'ArrayHelperCest:getLastValueTest',
+      2 => 'ArrayHelperCest:exceptionsTest',
+      3 => 'ArrayHelperCest:lastKeyUnset',
     ),
     417 => 
+    array (
+      0 => 'ArrayHelperCest:exceptionsTest',
+    ),
+    418 => NULL,
+    420 => 
     array (
       0 => 'ArrayHelperCest:getLastKeyTest',
       1 => 'ArrayHelperCest:getLastValueTest',
       2 => 'ArrayHelperCest:lastKeyUnset',
     ),
-    418 => NULL,
-    428 => 
+    421 => 
     array (
       0 => 'ArrayHelperCest:getLastKeyTest',
-      1 => 'ArrayHelperCest:exceptionsTest',
+      1 => 'ArrayHelperCest:getLastValueTest',
       2 => 'ArrayHelperCest:lastKeyUnset',
     ),
-    429 => 
+    423 => 
     array (
       0 => 'ArrayHelperCest:getLastKeyTest',
-      1 => 'ArrayHelperCest:exceptionsTest',
+      1 => 'ArrayHelperCest:getLastValueTest',
       2 => 'ArrayHelperCest:lastKeyUnset',
     ),
-    430 => 
-    array (
-      0 => 'ArrayHelperCest:exceptionsTest',
-    ),
-    431 => NULL,
-    433 => 
-    array (
-      0 => 'ArrayHelperCest:getLastKeyTest',
-      1 => 'ArrayHelperCest:lastKeyUnset',
-    ),
+    424 => NULL,
     434 => 
     array (
       0 => 'ArrayHelperCest:getLastKeyTest',
-      1 => 'ArrayHelperCest:lastKeyUnset',
+      1 => 'ArrayHelperCest:exceptionsTest',
+      2 => 'ArrayHelperCest:lastKeyUnset',
     ),
-    435 => NULL,
-    439 => 
+    435 => 
+    array (
+      0 => 'ArrayHelperCest:getLastKeyTest',
+      1 => 'ArrayHelperCest:exceptionsTest',
+      2 => 'ArrayHelperCest:lastKeyUnset',
+    ),
+    436 => 
     array (
       0 => 'ArrayHelperCest:exceptionsTest',
-      1 => 'ArrayHelperCest:firstKeyUnset',
+    ),
+    437 => NULL,
+    439 => 
+    array (
+      0 => 'ArrayHelperCest:getLastKeyTest',
+      1 => 'ArrayHelperCest:lastKeyUnset',
     ),
     440 => 
     array (
+      0 => 'ArrayHelperCest:getLastKeyTest',
+      1 => 'ArrayHelperCest:lastKeyUnset',
+    ),
+    441 => NULL,
+    451 => 
+    array (
       0 => 'ArrayHelperCest:exceptionsTest',
       1 => 'ArrayHelperCest:firstKeyUnset',
     ),
-    441 => 
+    452 => 
+    array (
+      0 => 'ArrayHelperCest:exceptionsTest',
+      1 => 'ArrayHelperCest:firstKeyUnset',
+    ),
+    453 => 
     array (
       0 => 'ArrayHelperCest:exceptionsTest',
     ),
-    442 => NULL,
-    444 => 
+    454 => NULL,
+    456 => 
     array (
       0 => 'ArrayHelperCest:firstKeyUnset',
     ),
-    445 => 
+    457 => 
     array (
       0 => 'ArrayHelperCest:firstKeyUnset',
-    ),
-    447 => 
-    array (
-      0 => 'ArrayHelperCest:firstKeyUnset',
-    ),
-    448 => NULL,
-    458 => 
-    array (
-      0 => 'ArrayHelperCest:getFirstValueTest',
-      1 => 'ArrayHelperCest:exceptionsTest',
-      2 => 'ArrayHelperCest:firstKeyUnset',
     ),
     459 => 
     array (
+      0 => 'ArrayHelperCest:firstKeyUnset',
+    ),
+    460 => NULL,
+    470 => 
+    array (
       0 => 'ArrayHelperCest:getFirstValueTest',
       1 => 'ArrayHelperCest:exceptionsTest',
       2 => 'ArrayHelperCest:firstKeyUnset',
     ),
-    460 => 
+    471 => 
+    array (
+      0 => 'ArrayHelperCest:getFirstValueTest',
+      1 => 'ArrayHelperCest:exceptionsTest',
+      2 => 'ArrayHelperCest:firstKeyUnset',
+    ),
+    472 => 
     array (
       0 => 'ArrayHelperCest:exceptionsTest',
     ),
-    461 => NULL,
-    463 => 
+    473 => NULL,
+    475 => 
     array (
       0 => 'ArrayHelperCest:getFirstValueTest',
       1 => 'ArrayHelperCest:firstKeyUnset',
     ),
-    465 => 
-    array (
-      0 => 'ArrayHelperCest:getFirstValueTest',
-      1 => 'ArrayHelperCest:firstKeyUnset',
-    ),
-    467 => NULL,
     477 => 
     array (
-      0 => 'ArrayHelperCest:getFirstKeyTest',
-      1 => 'ArrayHelperCest:exceptionsTest',
-      2 => 'ArrayHelperCest:firstKeyUnset',
+      0 => 'ArrayHelperCest:getFirstValueTest',
+      1 => 'ArrayHelperCest:firstKeyUnset',
     ),
-    478 => 
+    479 => NULL,
+    489 => 
     array (
       0 => 'ArrayHelperCest:getFirstKeyTest',
       1 => 'ArrayHelperCest:exceptionsTest',
       2 => 'ArrayHelperCest:firstKeyUnset',
     ),
-    479 => 
+    490 => 
+    array (
+      0 => 'ArrayHelperCest:getFirstKeyTest',
+      1 => 'ArrayHelperCest:exceptionsTest',
+      2 => 'ArrayHelperCest:firstKeyUnset',
+    ),
+    491 => 
     array (
       0 => 'ArrayHelperCest:exceptionsTest',
     ),
-    480 => NULL,
-    482 => 
+    492 => NULL,
+    494 => 
     array (
       0 => 'ArrayHelperCest:getFirstKeyTest',
       1 => 'ArrayHelperCest:firstKeyUnset',
     ),
-    484 => 
+    496 => 
     array (
       0 => 'ArrayHelperCest:getFirstKeyTest',
       1 => 'ArrayHelperCest:firstKeyUnset',
     ),
-    485 => NULL,
-    495 => 
+    497 => NULL,
+    507 => 
     array (
       0 => 'ArrayHelperCest:flipTest',
     ),
-    497 => 
+    509 => 
     array (
       0 => 'ArrayHelperCest:flipTest',
     ),
-    498 => NULL,
-    508 => 
+    510 => NULL,
+    520 => 
     array (
       0 => 'ArrayHelperCest:rangeTest',
       1 => 'ArrayHelperCest:loadReloadTest',
@@ -712,15 +722,17 @@ $coverage->setData(array (
       12 => 'ArrayHelperCest:mapTest',
       13 => 'ArrayHelperCest:filterTest',
     ),
-    509 => NULL,
-    522 => 
+    521 => NULL,
+    534 => 
     array (
       0 => 'ArrayHelperCest:loadReloadTest',
       1 => 'ArrayHelperCest:columnTest',
       2 => 'ArrayHelperCest:multiColumnTest',
+      3 => 'ArrayHelperCest:sliceTest',
+      4 => 'ArrayHelperCest:insertFirstLastTest',
     ),
-    523 => NULL,
-    532 => 
+    535 => NULL,
+    544 => 
     array (
       0 => 'ArrayHelperCest:rangeTest',
       1 => 'ArrayHelperCest:loadReloadTest',
@@ -741,105 +753,75 @@ $coverage->setData(array (
       16 => 'ArrayHelperCest:filterTest',
       17 => 'ArrayHelperCest:columnTest',
       18 => 'ArrayHelperCest:multiColumnTest',
+      19 => 'ArrayHelperCest:sliceTest',
+      20 => 'ArrayHelperCest:insertFirstLastTest',
     ),
-    533 => NULL,
-    543 => 
+    545 => NULL,
+    555 => 
     array (
       0 => 'ArrayHelperCest:countTest',
     ),
-    544 => NULL,
-    553 => 
-    array (
-      0 => 'ArrayHelperCest:countTest',
-      1 => 'ArrayHelperCest:firstKeyUnset',
-      2 => 'ArrayHelperCest:lastKeyUnset',
-    ),
-    554 => NULL,
-    564 => 
-    array (
-      0 => 'ArrayHelperCest:countTest',
-    ),
-    565 => NULL,
-    575 => 
+    556 => NULL,
+    565 => 
     array (
       0 => 'ArrayHelperCest:countTest',
       1 => 'ArrayHelperCest:firstKeyUnset',
       2 => 'ArrayHelperCest:lastKeyUnset',
     ),
-    576 => NULL,
-    590 => 
+    566 => NULL,
+    576 => 
     array (
-      0 => 'ArrayHelperCest:getAtTest',
-      1 => 'ArrayHelperCest:exceptionsTest',
+      0 => 'ArrayHelperCest:countTest',
     ),
-    591 => 
+    577 => NULL,
+    587 => 
     array (
-      0 => 'ArrayHelperCest:getAtTest',
-      1 => 'ArrayHelperCest:exceptionsTest',
+      0 => 'ArrayHelperCest:countTest',
+      1 => 'ArrayHelperCest:firstKeyUnset',
+      2 => 'ArrayHelperCest:lastKeyUnset',
     ),
-    592 => 
-    array (
-      0 => 'ArrayHelperCest:exceptionsTest',
-    ),
-    593 => NULL,
-    595 => 
-    array (
-      0 => 'ArrayHelperCest:getAtTest',
-      1 => 'ArrayHelperCest:exceptionsTest',
-    ),
-    596 => 
-    array (
-      0 => 'ArrayHelperCest:getAtTest',
-      1 => 'ArrayHelperCest:exceptionsTest',
-    ),
-    597 => 
-    array (
-      0 => 'ArrayHelperCest:getAtTest',
-      1 => 'ArrayHelperCest:exceptionsTest',
-    ),
-    598 => 
-    array (
-      0 => 'ArrayHelperCest:getAtTest',
-    ),
-    599 => NULL,
+    588 => NULL,
     602 => 
     array (
+      0 => 'ArrayHelperCest:getAtTest',
+      1 => 'ArrayHelperCest:exceptionsTest',
+    ),
+    603 => 
+    array (
+      0 => 'ArrayHelperCest:getAtTest',
+      1 => 'ArrayHelperCest:exceptionsTest',
+    ),
+    604 => 
+    array (
       0 => 'ArrayHelperCest:exceptionsTest',
     ),
-    604 => NULL,
-    617 => 
+    605 => NULL,
+    607 => 
     array (
-      0 => 'ArrayHelperCest:keyExistsTest',
+      0 => 'ArrayHelperCest:getAtTest',
+      1 => 'ArrayHelperCest:exceptionsTest',
     ),
-    618 => 
+    608 => 
     array (
-      0 => 'ArrayHelperCest:keyExistsTest',
+      0 => 'ArrayHelperCest:getAtTest',
+      1 => 'ArrayHelperCest:exceptionsTest',
     ),
-    621 => 
+    609 => 
     array (
-      0 => 'ArrayHelperCest:keyExistsTest',
+      0 => 'ArrayHelperCest:getAtTest',
+      1 => 'ArrayHelperCest:exceptionsTest',
     ),
-    622 => 
+    610 => 
     array (
-      0 => 'ArrayHelperCest:keyExistsTest',
+      0 => 'ArrayHelperCest:getAtTest',
     ),
-    623 => 
+    611 => NULL,
+    614 => 
     array (
-      0 => 'ArrayHelperCest:keyExistsTest',
+      0 => 'ArrayHelperCest:exceptionsTest',
     ),
-    624 => 
-    array (
-      0 => 'ArrayHelperCest:keyExistsTest',
-    ),
-    625 => 
-    array (
-      0 => 'ArrayHelperCest:keyExistsTest',
-    ),
-    626 => 
-    array (
-      0 => 'ArrayHelperCest:keyExistsTest',
-    ),
-    628 => 
+    616 => NULL,
+    629 => 
     array (
       0 => 'ArrayHelperCest:keyExistsTest',
     ),
@@ -847,15 +829,11 @@ $coverage->setData(array (
     array (
       0 => 'ArrayHelperCest:keyExistsTest',
     ),
-    631 => 
-    array (
-      0 => 'ArrayHelperCest:keyExistsTest',
-    ),
-    632 => 
-    array (
-      0 => 'ArrayHelperCest:keyExistsTest',
-    ),
     633 => 
+    array (
+      0 => 'ArrayHelperCest:keyExistsTest',
+    ),
+    634 => 
     array (
       0 => 'ArrayHelperCest:keyExistsTest',
     ),
@@ -871,15 +849,11 @@ $coverage->setData(array (
     array (
       0 => 'ArrayHelperCest:keyExistsTest',
     ),
-    639 => 
+    638 => 
     array (
       0 => 'ArrayHelperCest:keyExistsTest',
     ),
     640 => 
-    array (
-      0 => 'ArrayHelperCest:keyExistsTest',
-    ),
-    641 => 
     array (
       0 => 'ArrayHelperCest:keyExistsTest',
     ),
@@ -903,40 +877,48 @@ $coverage->setData(array (
     array (
       0 => 'ArrayHelperCest:keyExistsTest',
     ),
-    648 => NULL,
-    662 => 
+    648 => 
     array (
-      0 => 'ArrayHelperCest:valueExistsTest',
+      0 => 'ArrayHelperCest:keyExistsTest',
     ),
-    663 => 
+    649 => 
     array (
-      0 => 'ArrayHelperCest:valueExistsTest',
+      0 => 'ArrayHelperCest:keyExistsTest',
     ),
-    666 => 
+    651 => 
     array (
-      0 => 'ArrayHelperCest:valueExistsTest',
+      0 => 'ArrayHelperCest:keyExistsTest',
     ),
-    667 => 
+    652 => 
     array (
-      0 => 'ArrayHelperCest:valueExistsTest',
+      0 => 'ArrayHelperCest:keyExistsTest',
     ),
-    668 => 
+    653 => 
     array (
-      0 => 'ArrayHelperCest:valueExistsTest',
+      0 => 'ArrayHelperCest:keyExistsTest',
     ),
-    669 => 
+    654 => 
     array (
-      0 => 'ArrayHelperCest:valueExistsTest',
+      0 => 'ArrayHelperCest:keyExistsTest',
     ),
-    670 => 
+    655 => 
     array (
-      0 => 'ArrayHelperCest:valueExistsTest',
+      0 => 'ArrayHelperCest:keyExistsTest',
     ),
-    671 => 
+    656 => 
     array (
-      0 => 'ArrayHelperCest:valueExistsTest',
+      0 => 'ArrayHelperCest:keyExistsTest',
     ),
-    673 => 
+    657 => 
+    array (
+      0 => 'ArrayHelperCest:keyExistsTest',
+    ),
+    659 => 
+    array (
+      0 => 'ArrayHelperCest:keyExistsTest',
+    ),
+    660 => NULL,
+    674 => 
     array (
       0 => 'ArrayHelperCest:valueExistsTest',
     ),
@@ -944,15 +926,11 @@ $coverage->setData(array (
     array (
       0 => 'ArrayHelperCest:valueExistsTest',
     ),
-    676 => 
-    array (
-      0 => 'ArrayHelperCest:valueExistsTest',
-    ),
-    677 => 
-    array (
-      0 => 'ArrayHelperCest:valueExistsTest',
-    ),
     678 => 
+    array (
+      0 => 'ArrayHelperCest:valueExistsTest',
+    ),
+    679 => 
     array (
       0 => 'ArrayHelperCest:valueExistsTest',
     ),
@@ -968,15 +946,11 @@ $coverage->setData(array (
     array (
       0 => 'ArrayHelperCest:valueExistsTest',
     ),
-    684 => 
+    683 => 
     array (
       0 => 'ArrayHelperCest:valueExistsTest',
     ),
     685 => 
-    array (
-      0 => 'ArrayHelperCest:valueExistsTest',
-    ),
-    686 => 
     array (
       0 => 'ArrayHelperCest:valueExistsTest',
     ),
@@ -1000,36 +974,48 @@ $coverage->setData(array (
     array (
       0 => 'ArrayHelperCest:valueExistsTest',
     ),
-    693 => NULL,
+    693 => 
+    array (
+      0 => 'ArrayHelperCest:valueExistsTest',
+    ),
+    694 => 
+    array (
+      0 => 'ArrayHelperCest:valueExistsTest',
+    ),
+    696 => 
+    array (
+      0 => 'ArrayHelperCest:valueExistsTest',
+    ),
+    697 => 
+    array (
+      0 => 'ArrayHelperCest:valueExistsTest',
+    ),
+    698 => 
+    array (
+      0 => 'ArrayHelperCest:valueExistsTest',
+    ),
+    699 => 
+    array (
+      0 => 'ArrayHelperCest:valueExistsTest',
+    ),
+    700 => 
+    array (
+      0 => 'ArrayHelperCest:valueExistsTest',
+    ),
+    701 => 
+    array (
+      0 => 'ArrayHelperCest:valueExistsTest',
+    ),
+    702 => 
+    array (
+      0 => 'ArrayHelperCest:valueExistsTest',
+    ),
     704 => 
     array (
-      0 => 'ArrayHelperCest:convertToIndexedTest',
+      0 => 'ArrayHelperCest:valueExistsTest',
     ),
-    705 => 
-    array (
-      0 => 'ArrayHelperCest:convertToIndexedTest',
-    ),
-    707 => 
-    array (
-      0 => 'ArrayHelperCest:convertToIndexedTest',
-    ),
-    708 => 
-    array (
-      0 => 'ArrayHelperCest:convertToIndexedTest',
-    ),
-    709 => 
-    array (
-      0 => 'ArrayHelperCest:convertToIndexedTest',
-    ),
-    710 => 
-    array (
-      0 => 'ArrayHelperCest:convertToIndexedTest',
-    ),
-    713 => 
-    array (
-      0 => 'ArrayHelperCest:convertToIndexedTest',
-    ),
-    715 => 
+    705 => NULL,
+    716 => 
     array (
       0 => 'ArrayHelperCest:convertToIndexedTest',
     ),
@@ -1041,48 +1027,40 @@ $coverage->setData(array (
     array (
       0 => 'ArrayHelperCest:convertToIndexedTest',
     ),
-    720 => NULL,
-    732 => 
+    720 => 
     array (
-      0 => 'ArrayHelperCest:splitPartsTest',
+      0 => 'ArrayHelperCest:convertToIndexedTest',
     ),
-    733 => 
+    721 => 
     array (
-      0 => 'ArrayHelperCest:splitPartsTest',
+      0 => 'ArrayHelperCest:convertToIndexedTest',
     ),
-    734 => 
+    722 => 
     array (
-      0 => 'ArrayHelperCest:splitPartsTest',
+      0 => 'ArrayHelperCest:convertToIndexedTest',
     ),
-    735 => 
+    725 => 
     array (
-      0 => 'ArrayHelperCest:splitPartsTest',
+      0 => 'ArrayHelperCest:convertToIndexedTest',
     ),
-    737 => 
+    727 => 
     array (
-      0 => 'ArrayHelperCest:splitPartsTest',
+      0 => 'ArrayHelperCest:convertToIndexedTest',
     ),
-    739 => 
+    729 => 
     array (
-      0 => 'ArrayHelperCest:splitPartsTest',
+      0 => 'ArrayHelperCest:convertToIndexedTest',
     ),
-    740 => 
+    731 => 
     array (
-      0 => 'ArrayHelperCest:splitPartsTest',
+      0 => 'ArrayHelperCest:convertToIndexedTest',
     ),
-    741 => 
-    array (
-      0 => 'ArrayHelperCest:splitPartsTest',
-    ),
-    742 => 
-    array (
-      0 => 'ArrayHelperCest:splitPartsTest',
-    ),
-    743 => 
-    array (
-      0 => 'ArrayHelperCest:splitPartsTest',
-    ),
+    732 => NULL,
     744 => 
+    array (
+      0 => 'ArrayHelperCest:splitPartsTest',
+    ),
+    745 => 
     array (
       0 => 'ArrayHelperCest:splitPartsTest',
     ),
@@ -1090,30 +1068,53 @@ $coverage->setData(array (
     array (
       0 => 'ArrayHelperCest:splitPartsTest',
     ),
-    747 => NULL,
+    747 => 
+    array (
+      0 => 'ArrayHelperCest:splitPartsTest',
+    ),
+    749 => 
+    array (
+      0 => 'ArrayHelperCest:splitPartsTest',
+    ),
+    751 => 
+    array (
+      0 => 'ArrayHelperCest:splitPartsTest',
+    ),
+    752 => 
+    array (
+      0 => 'ArrayHelperCest:splitPartsTest',
+    ),
+    753 => 
+    array (
+      0 => 'ArrayHelperCest:splitPartsTest',
+    ),
+    754 => 
+    array (
+      0 => 'ArrayHelperCest:splitPartsTest',
+    ),
+    755 => 
+    array (
+      0 => 'ArrayHelperCest:splitPartsTest',
+    ),
     756 => 
     array (
-      0 => 'ArrayHelperCest:iteratorTest',
+      0 => 'ArrayHelperCest:splitPartsTest',
     ),
-    757 => NULL,
+    758 => 
+    array (
+      0 => 'ArrayHelperCest:splitPartsTest',
+    ),
+    759 => NULL,
     768 => 
     array (
-      0 => 'ArrayHelperCest:arrayAccessTest',
+      0 => 'ArrayHelperCest:iteratorTest',
     ),
     769 => NULL,
     780 => 
     array (
       0 => 'ArrayHelperCest:arrayAccessTest',
     ),
-    781 => 
-    array (
-      0 => 'ArrayHelperCest:arrayAccessTest',
-    ),
-    782 => 
-    array (
-      0 => 'ArrayHelperCest:arrayAccessTest',
-    ),
-    783 => NULL,
+    781 => NULL,
     792 => 
     array (
       0 => 'ArrayHelperCest:arrayAccessTest',
@@ -1126,25 +1127,32 @@ $coverage->setData(array (
     array (
       0 => 'ArrayHelperCest:arrayAccessTest',
     ),
-    795 => 
+    795 => NULL,
+    805 => 
     array (
       0 => 'ArrayHelperCest:arrayAccessTest',
     ),
-    798 => 
+    806 => 
     array (
       0 => 'ArrayHelperCest:arrayAccessTest',
     ),
-    800 => 
+    807 => 
     array (
       0 => 'ArrayHelperCest:arrayAccessTest',
     ),
-    809 => 
+    808 => 
     array (
       0 => 'ArrayHelperCest:arrayAccessTest',
-      1 => 'ArrayHelperCest:firstKeyUnset',
-      2 => 'ArrayHelperCest:lastKeyUnset',
     ),
-    810 => 
+    811 => 
+    array (
+      0 => 'ArrayHelperCest:arrayAccessTest',
+    ),
+    813 => 
+    array (
+      0 => 'ArrayHelperCest:arrayAccessTest',
+    ),
+    822 => 
     array (
       0 => 'ArrayHelperCest:arrayAccessTest',
       1 => 'ArrayHelperCest:firstKeyUnset',
@@ -1152,121 +1160,150 @@ $coverage->setData(array (
     ),
     823 => 
     array (
-      0 => 'ArrayHelperCest:mapTest',
+      0 => 'ArrayHelperCest:arrayAccessTest',
+      1 => 'ArrayHelperCest:firstKeyUnset',
+      2 => 'ArrayHelperCest:lastKeyUnset',
     ),
-    825 => 
+    836 => 
     array (
       0 => 'ArrayHelperCest:mapTest',
     ),
-    826 => 
+    838 => 
     array (
       0 => 'ArrayHelperCest:mapTest',
     ),
-    828 => 
+    839 => 
     array (
       0 => 'ArrayHelperCest:mapTest',
     ),
-    829 => NULL,
-    842 => 
+    841 => 
     array (
-      0 => 'ArrayHelperCest:filterTest',
+      0 => 'ArrayHelperCest:mapTest',
     ),
-    844 => 
-    array (
-      0 => 'ArrayHelperCest:filterTest',
-    ),
-    845 => 
-    array (
-      0 => 'ArrayHelperCest:filterTest',
-    ),
-    846 => 
-    array (
-      0 => 'ArrayHelperCest:filterTest',
-    ),
-    847 => 
-    array (
-      0 => 'ArrayHelperCest:filterTest',
-    ),
-    848 => 
-    array (
-      0 => 'ArrayHelperCest:filterTest',
-    ),
-    850 => 
-    array (
-      0 => 'ArrayHelperCest:filterTest',
-    ),
-    851 => NULL,
+    842 => NULL,
     855 => 
     array (
-      0 => 'ArrayHelperCest:columnTest',
-      1 => 'ArrayHelperCest:multiColumnTest',
+      0 => 'ArrayHelperCest:filterTest',
     ),
     857 => 
     array (
-      0 => 'ArrayHelperCest:columnTest',
-      1 => 'ArrayHelperCest:multiColumnTest',
+      0 => 'ArrayHelperCest:filterTest',
+    ),
+    858 => 
+    array (
+      0 => 'ArrayHelperCest:filterTest',
     ),
     859 => 
     array (
-      0 => 'ArrayHelperCest:columnTest',
-      1 => 'ArrayHelperCest:multiColumnTest',
+      0 => 'ArrayHelperCest:filterTest',
     ),
     860 => 
     array (
-      0 => 'ArrayHelperCest:columnTest',
-      1 => 'ArrayHelperCest:multiColumnTest',
+      0 => 'ArrayHelperCest:filterTest',
     ),
-    862 => 
+    861 => 
+    array (
+      0 => 'ArrayHelperCest:filterTest',
+    ),
+    863 => 
+    array (
+      0 => 'ArrayHelperCest:filterTest',
+    ),
+    864 => NULL,
+    875 => 
     array (
       0 => 'ArrayHelperCest:columnTest',
       1 => 'ArrayHelperCest:multiColumnTest',
     ),
-    864 => 
+    877 => 
     array (
       0 => 'ArrayHelperCest:columnTest',
       1 => 'ArrayHelperCest:multiColumnTest',
     ),
-    865 => 
+    879 => 
     array (
       0 => 'ArrayHelperCest:columnTest',
       1 => 'ArrayHelperCest:multiColumnTest',
     ),
-    866 => 
+    880 => 
     array (
       0 => 'ArrayHelperCest:columnTest',
       1 => 'ArrayHelperCest:multiColumnTest',
     ),
-    867 => 
+    882 => 
     array (
       0 => 'ArrayHelperCest:columnTest',
       1 => 'ArrayHelperCest:multiColumnTest',
     ),
-    868 => 
+    884 => 
     array (
       0 => 'ArrayHelperCest:columnTest',
       1 => 'ArrayHelperCest:multiColumnTest',
     ),
-    869 => 
+    885 => 
     array (
       0 => 'ArrayHelperCest:columnTest',
       1 => 'ArrayHelperCest:multiColumnTest',
     ),
-    870 => 
+    886 => 
     array (
       0 => 'ArrayHelperCest:columnTest',
       1 => 'ArrayHelperCest:multiColumnTest',
     ),
-    872 => 
+    887 => 
     array (
       0 => 'ArrayHelperCest:columnTest',
       1 => 'ArrayHelperCest:multiColumnTest',
     ),
-    873 => 
+    888 => 
     array (
       0 => 'ArrayHelperCest:columnTest',
       1 => 'ArrayHelperCest:multiColumnTest',
     ),
-    874 => NULL,
+    889 => 
+    array (
+      0 => 'ArrayHelperCest:columnTest',
+      1 => 'ArrayHelperCest:multiColumnTest',
+    ),
+    890 => 
+    array (
+      0 => 'ArrayHelperCest:columnTest',
+      1 => 'ArrayHelperCest:multiColumnTest',
+    ),
+    892 => 
+    array (
+      0 => 'ArrayHelperCest:columnTest',
+      1 => 'ArrayHelperCest:multiColumnTest',
+    ),
+    893 => 
+    array (
+      0 => 'ArrayHelperCest:columnTest',
+      1 => 'ArrayHelperCest:multiColumnTest',
+    ),
+    894 => NULL,
+    905 => 
+    array (
+      0 => 'ArrayHelperCest:insertFirstLastTest',
+    ),
+    906 => NULL,
+    917 => 
+    array (
+      0 => 'ArrayHelperCest:insertFirstLastTest',
+    ),
+    919 => 
+    array (
+      0 => 'ArrayHelperCest:insertFirstLastTest',
+    ),
+    920 => NULL,
+    932 => 
+    array (
+      0 => 'ArrayHelperCest:sliceTest',
+    ),
+    934 => 
+    array (
+      0 => 'ArrayHelperCest:sliceTest',
+    ),
+    935 => NULL,
   ),
   'C:\\OpenServer\\domains\\array-helper\\src\\Zver\\Exceptions\\ArrayHelper\\UndefinedOffsetException.php' => 
   array (
@@ -1457,6 +1494,16 @@ $coverage->setTests(array (
     'status' => NULL,
   ),
   'ArrayHelperCest:multiColumnTest' => 
+  array (
+    'size' => 'unknown',
+    'status' => NULL,
+  ),
+  'ArrayHelperCest:sliceTest' => 
+  array (
+    'size' => 'unknown',
+    'status' => NULL,
+  ),
+  'ArrayHelperCest:insertFirstLastTest' => 
   array (
     'size' => 'unknown',
     'status' => NULL,

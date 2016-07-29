@@ -1664,4 +1664,131 @@ class ArrayHelperCest
         
     }
     
+    public function sliceTest(UnitTester $I)
+    {
+        $load = [
+            'el1' => 0,
+            'el2' => 2,
+            'el3' => 3,
+            'el4' => 4,
+            'el5' => 5,
+            'el6' => 6,
+            'el7' => 7,
+        ];
+        
+        $ah = ArrayHelper::load($load);
+        
+        $I->assertSame(
+            $ah->slice(0, 100)
+               ->get(), $load
+        );
+        
+        $ah->setArray($load);
+        
+        $I->assertSame(
+            $ah->slice(10, 100)
+               ->get(), []
+        );
+        
+        $ah->setArray($load);
+        
+        $I->assertSame(
+            $ah->slice(0, 1)
+               ->get(), ['el1' => 0]
+        );
+        
+        $ah->setArray($load);
+        
+        $I->assertSame(
+            $ah->slice(0, 3)
+               ->get(), [
+                'el1' => 0,
+                'el2' => 2,
+                'el3' => 3,
+            ]
+        );
+        
+        $ah->setArray($load);
+        
+        $I->assertSame(
+            $ah->slice(2, 3)
+               ->get(), [
+                'el3' => 3,
+                'el4' => 4,
+                'el5' => 5,
+            ]
+        );
+    }
+    
+    public function insertFirstLastTest(UnitTester $I)
+    {
+        $ah = ArrayHelper::load([9])
+                         ->insertFirst(8)
+                         ->insertFirst(7)
+                         ->insertFirst(6)
+                         ->insertFirst(5)
+                         ->insertFirst(4)
+                         ->insertFirst(3)
+                         ->insertFirst(2)
+                         ->insertFirst(1)
+                         ->insertFirst(0);
+        
+        $I->assertSame($ah->get(), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+        
+        $ah = ArrayHelper::load([])
+                         ->insertFirst(9)
+                         ->insertFirst(8)
+                         ->insertFirst(7)
+                         ->insertFirst(6)
+                         ->insertFirst(5)
+                         ->insertFirst(4)
+                         ->insertFirst(3)
+                         ->insertFirst(2)
+                         ->insertFirst(1)
+                         ->insertFirst(0);
+        
+        $I->assertSame($ah->get(), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+        
+        $ah = ArrayHelper::load([0])
+                         ->insertLast(1)
+                         ->insertLast(2)
+                         ->insertLast(3)
+                         ->insertLast(4)
+                         ->insertLast(5)
+                         ->insertLast(6)
+                         ->insertLast(7)
+                         ->insertLast(8)
+                         ->insertLast(9);
+        
+        $I->assertSame($ah->get(), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+        
+        $ah = ArrayHelper::load([])
+                         ->insertLast(0)
+                         ->insertLast(1)
+                         ->insertLast(2)
+                         ->insertLast(3)
+                         ->insertLast(4)
+                         ->insertLast(5)
+                         ->insertLast(6)
+                         ->insertLast(7)
+                         ->insertLast(8)
+                         ->insertLast(9);
+        
+        $I->assertSame($ah->get(), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+        
+        $ah = ArrayHelper::load([])
+                         ->insertLast(5)
+                         ->insertFirst(4)
+                         ->insertLast(6)
+                         ->insertLast(7)
+                         ->insertFirst(3)
+                         ->insertFirst(2)
+                         ->insertLast(8)
+                         ->insertFirst(1)
+                         ->insertFirst(0)
+                         ->insertLast(9);
+        
+        $I->assertSame($ah->get(), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+    }
+    
 }
