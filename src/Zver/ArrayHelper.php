@@ -3,6 +3,7 @@
 namespace Zver
 {
     
+    use Symfony\Component\Config\Definition\Exception\Exception;
     use Zver\Exceptions\ArrayHelper\EmptyArrayException;
     use Zver\Exceptions\ArrayHelper\UndefinedOffsetException;
     
@@ -930,6 +931,63 @@ namespace Zver
         public function slice($offset, $length)
         {
             $this->array = array_slice($this->array, $offset, $length, true);
+            
+            return $this;
+        }
+        
+        public function sliceFromCenter($centerIndex, $itemsPerSide)
+        {
+            $itemsPerSide = intval($itemsPerSide);
+            
+            /**
+             * Check items per side is correct
+             */
+            if ($itemsPerSide < 1)
+            {
+                throw new Exception('Items per side must be >=1 ');
+            }
+            
+            /**
+             * Check center index is exists
+             */
+            if (!$this->isKeyExists($centerIndex))
+            {
+                throw new Exception('Center index="' . $centerIndex . '" is not exists');
+            }
+            
+            /**
+             * Check slice is needed
+             */
+            if ($this->length() > $itemsPerSide + $itemsPerSide + 1)
+            {
+                
+                $sliceStart = $centerIndex;
+                $sliceEnd = $centerIndex;
+                
+                $availableSpace = $itemsPerSide + $itemsPerSide;
+                $currentInc = 1;
+                
+                while ($availableSpace > 0)
+                {
+                    if ($this->isKeyExists($centerIndex + $currentInc))
+                    {
+                        $availableSpace--;
+                        $sliceEnd++;
+                    }
+                    
+                    if ($this->isKeyExists($centerIndex - $currentInc))
+                    {
+                        $availableSpace--;
+                        $sliceStart--;
+                    }
+                    
+                    $currentInc++;
+                }
+                
+                return $this->slice($sliceStart, $sliceEnd - $sliceStart + 1)
+                            ->convertToIndexed();
+                
+            }
             
             return $this;
         }

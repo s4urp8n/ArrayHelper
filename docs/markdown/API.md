@@ -49,6 +49,7 @@
     * [insertFirst](#insertfirst)
     * [insertLast](#insertlast)
     * [slice](#slice)
+    * [sliceFromCenter](#slicefromcenter)
 * [EmptyArrayException](#emptyarrayexception)
 * [UndefinedOffsetException](#undefinedoffsetexception)
 
@@ -995,6 +996,29 @@ ArrayHelper::slice(  $offset,  $length ): $this
 
 ---
 
+### sliceFromCenter
+
+
+
+```php
+ArrayHelper::sliceFromCenter(  $centerIndex,  $itemsPerSide )
+```
+
+
+
+
+**Parameters:**
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `$centerIndex` | **** |  |
+| `$itemsPerSide` | **** |  |
+
+
+
+
+---
+
 ## EmptyArrayException
 
 
@@ -1018,4 +1042,4 @@ ArrayHelper::slice(  $offset,  $length ): $this
 
 
 --------
-> This document was automatically generated from source code comments on 2016-07-29 using [phpDocumentor](http://www.phpdoc.org/) and [cvuorinen/phpdoc-markdown-public](https://github.com/cvuorinen/phpdoc-markdown-public)
+> This document was automatically generated from source code comments on 2016-07-31 using [phpDocumentor](http://www.phpdoc.org/) and [cvuorinen/phpdoc-markdown-public](https://github.com/cvuorinen/phpdoc-markdown-public)

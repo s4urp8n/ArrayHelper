@@ -1791,4 +1791,153 @@ class ArrayHelperCest
         $I->assertSame($ah->get(), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
     }
     
+    public function sideIndexesExceptionsTest(UnitTester $I)
+    {
+        $I->expectException(
+            'Exception', function ()
+        {
+            ArrayHelper::load([])
+                       ->sliceFromCenter(-1, 3);
+        }
+        );
+        
+        $I->expectException(
+            'Exception', function ()
+        {
+            ArrayHelper::load([0])
+                       ->sliceFromCenter(0, -3);
+        }
+        );
+        
+        $I->expectException(
+            'Exception', function ()
+        {
+            ArrayHelper::load([0])
+                       ->sliceFromCenter(0, 'string');
+        }
+        );
+    }
+    
+    public function sideIndexesTest(UnitTester $I)
+    {
+        
+        $testData = [
+            [
+                'source'       => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+                'centerIndex'  => 0,
+                'itemsPerSide' => 3,
+                'result'       => [0, 1, 2, 3, 4, 5, 6],
+            ],
+            [
+                'source'       => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+                'centerIndex'  => 1,
+                'itemsPerSide' => 3,
+                'result'       => [0, 1, 2, 3, 4, 5, 6],
+            ],
+            [
+                'source'       => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+                'centerIndex'  => 2,
+                'itemsPerSide' => 3,
+                'result'       => [0, 1, 2, 3, 4, 5, 6],
+            ],
+            [
+                'source'       => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+                'centerIndex'  => 3,
+                'itemsPerSide' => 3,
+                'result'       => [0, 1, 2, 3, 4, 5, 6],
+            ],
+            [
+                'source'       => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+                'centerIndex'  => 4,
+                'itemsPerSide' => 3,
+                'result'       => [1, 2, 3, 4, 5, 6, 7],
+            ],
+            [
+                'source'       => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+                'centerIndex'  => 5,
+                'itemsPerSide' => 3,
+                'result'       => [2, 3, 4, 5, 6, 7, 8],
+            ],
+            [
+                'source'       => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+                'centerIndex'  => 6,
+                'itemsPerSide' => 3,
+                'result'       => [3, 4, 5, 6, 7, 8, 9],
+            ],
+            [
+                'source'       => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+                'centerIndex'  => 7,
+                'itemsPerSide' => 3,
+                'result'       => [3, 4, 5, 6, 7, 8, 9],
+            ],
+            [
+                'source'       => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+                'centerIndex'  => 8,
+                'itemsPerSide' => 3,
+                'result'       => [3, 4, 5, 6, 7, 8, 9],
+            ],
+            [
+                'source'       => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+                'centerIndex'  => 9,
+                'itemsPerSide' => 3,
+                'result'       => [3, 4, 5, 6, 7, 8, 9],
+            ],
+            
+            [
+                'source'       => [0, 1, 2],
+                'centerIndex'  => 0,
+                'itemsPerSide' => 1,
+                'result'       => [0, 1, 2],
+            ],
+            [
+                'source'       => [0, 1, 2],
+                'centerIndex'  => 1,
+                'itemsPerSide' => 1,
+                'result'       => [0, 1, 2],
+            ],
+            [
+                'source'       => [0, 1, 2],
+                'centerIndex'  => 2,
+                'itemsPerSide' => 1,
+                'result'       => [0, 1, 2],
+            ],
+            
+            [
+                'source'       => [0, 1, 2, 3],
+                'centerIndex'  => 0,
+                'itemsPerSide' => 1,
+                'result'       => [0, 1, 2],
+            ],
+            
+            [
+                'source'       => [0, 1, 2, 3],
+                'centerIndex'  => 1,
+                'itemsPerSide' => 1,
+                'result'       => [0, 1, 2],
+            ],
+            [
+                'source'       => [0, 1, 2, 3],
+                'centerIndex'  => 2,
+                'itemsPerSide' => 1,
+                'result'       => [1, 2, 3],
+            ],
+            [
+                'source'       => [0, 1, 2, 3],
+                'centerIndex'  => 3,
+                'itemsPerSide' => 1,
+                'result'       => [1, 2, 3],
+            ],
+        ];
+        
+        foreach ($testData as $test)
+        {
+            $I->assertSame(
+                ArrayHelper::load($test['source'])
+                           ->sliceFromCenter($test['centerIndex'], $test['itemsPerSide'])
+                           ->get(), $test['result']
+            );
+        }
+        
+    }
+    
 }

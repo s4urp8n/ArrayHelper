@@ -1,12 +1,12 @@
 
 
 Code Coverage Report:       
-  2016-07-29 04:08:58       
+  2016-07-31 13:36:27       
                             
  Summary:                   
   Classes: 100.00% (3/3)    
-  Methods: 100.00% (48/48)  
-  Lines:   100.00% (229/229)
+  Methods: 100.00% (49/49)  
+  Lines:   100.00% (258/258)
 
 \Zver::ArrayHelper
-  Methods: 100.00% (48/48)   Lines: 100.00% (217/217)
+  Methods: 100.00% (49/49)   Lines: 100.00% (246/246)
