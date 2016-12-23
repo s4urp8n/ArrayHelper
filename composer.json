@@ -1,16 +1,17 @@
 {
-  "name": "zver/array-helper",
-  "description": "Helps you to manipulate with arrays",
-  "keywords": [
-    "array",
-    "helper",
-    "zver",
-    "arrays"
-  ],
+  "name": "zver/package-template",
+  "description": "this is universal package template for development and testing",
+  "minimum-stability": "stable",
+  "config": {
+    "optimize-autoloader": true
+  },
   "autoload": {
     "psr-4": {
       "": "src/"
-    }
+    },
+    "files": [
+      "src/Functions.php"
+    ]
   },
   "autoload-dev": {
     "psr-4": {
@@ -20,9 +21,5 @@
   "require": {
   },
   "require-dev": {
-    "codeception/codeception": "2.*",
-    "codeception/c3": "2.*",
-    "phpdocumentor/phpdocumentor": "2.*",
-    "cvuorinen/phpdoc-markdown-public": "*"
   }
 }

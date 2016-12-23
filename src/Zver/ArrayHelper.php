@@ -1,12 +1,10 @@
 <?php
 
-namespace Zver
-{
-    
-    use Symfony\Component\Config\Definition\Exception\Exception;
+namespace Zver {
+
     use Zver\Exceptions\ArrayHelper\EmptyArrayException;
     use Zver\Exceptions\ArrayHelper\UndefinedOffsetException;
-    
+
     /**
      * To help you manipulate with arrays
      *
@@ -14,14 +12,14 @@ namespace Zver
      */
     class ArrayHelper implements \ArrayAccess, \IteratorAggregate
     {
-        
+
         /**
          * Protected variable to store loaded array
          *
          * @var array
          */
         protected $array = [];
-        
+
         /**
          * Private constructor
          *
@@ -31,7 +29,7 @@ namespace Zver
         {
             $this->array = $array;
         }
-        
+
         /**
          * Get instance of class with loaded array of range values
          *
@@ -61,7 +59,7 @@ namespace Zver
         {
             return static::load(range($min, $max, $step));
         }
-        
+
         /**
          * Get instance of ArrayHelper class and load array
          *
@@ -81,7 +79,7 @@ namespace Zver
         {
             return new static($array);
         }
-        
+
         /**
          * Get instance of ArrayHelper class with exploded string loaded
          *
@@ -95,7 +93,7 @@ namespace Zver
         {
             return static::load(explode($delimeter, $string));
         }
-        
+
         /**
          * Combined two array, keys and values by common associative key
          *
@@ -137,21 +135,18 @@ namespace Zver
         public static function combine(array $keys, array $values)
         {
             $combined = [];
-            
-            foreach ($keys as $keysKey => $keysValue)
-            {
-                foreach ($values as $valuesKey => $valuesValue)
-                {
-                    if ($valuesKey == $keysKey)
-                    {
+
+            foreach ($keys as $keysKey => $keysValue) {
+                foreach ($values as $valuesKey => $valuesValue) {
+                    if ($valuesKey == $keysKey) {
                         $combined[$keysValue] = $valuesValue;
                     }
                 }
             }
-            
+
             return static::load($combined);
         }
-        
+
         /**
          * Get clone of instance
          *
@@ -175,7 +170,7 @@ namespace Zver
         {
             return static::load($this->array);
         }
-        
+
         /**
          * Alias for implode()
          *
@@ -189,7 +184,7 @@ namespace Zver
         {
             return $this->implode($glue, $maxDepth);
         }
-        
+
         /**
          * Concatenates all elements in array recursively in one string.
          * $glue will placed between elements
@@ -218,12 +213,9 @@ namespace Zver
         {
             $imploded = '';
             $this->walk(
-                function ($key, $value, $path) use (&$imploded, $glue, $maxDepth)
-                {
-                    if (!is_array($value))
-                    {
-                        if ($maxDepth <= 0 || ($maxDepth > 0 && count($path) <= $maxDepth))
-                        {
+                function ($key, $value, $path) use (&$imploded, $glue, $maxDepth) {
+                    if (!is_array($value)) {
+                        if ($maxDepth <= 0 || ($maxDepth > 0 && count($path) <= $maxDepth)) {
                             $imploded .= (($imploded === '')
                                     ? ''
                                     : $glue) . $value;
@@ -231,10 +223,10 @@ namespace Zver
                     }
                 }
             );
-            
+
             return $imploded;
         }
-        
+
         /**
          * Run callback function with every element of loaded array as an argument recursively
          *
@@ -244,25 +236,21 @@ namespace Zver
          */
         public function walk(callable $callback, $path = [], $that = null)
         {
-            foreach ($this->array as $key => $element)
-            {
-                
-                if (is_array($element))
-                {
+            foreach ($this->array as $key => $element) {
+
+                if (is_array($element)) {
                     call_user_func_array($callback, [$key, $element, $path, $this]);
                     $path[] = $key;
                     static::load($element)
                           ->walk($callback, $path, $this);
-                }
-                else
-                {
+                } else {
                     call_user_func_array($callback, [$key, $element, $path, $this]);
                 }
             }
-            
+
             return $this;
         }
-        
+
         /**
          * Alias for set()
          *
@@ -276,7 +264,7 @@ namespace Zver
         {
             return $this->set($array);
         }
-        
+
         /**
          * Replace loaded array with $array
          *
@@ -297,10 +285,10 @@ namespace Zver
         public function set(array $array)
         {
             $this->array = $array;
-            
+
             return $this;
         }
-        
+
         /**
          * Reverse order of loaded array keys and values
          *
@@ -311,7 +299,7 @@ namespace Zver
             return $this->reverseKeys()
                         ->reverseValues();
         }
-        
+
         /**
          * Reverse order of loaded array values
          *
@@ -321,19 +309,18 @@ namespace Zver
         {
             $keys = $this->getKeys();
             $values = array_reverse($this->getValues());
-            
+
             $reversed = [];
-            
-            foreach ($keys as $index => $key)
-            {
+
+            foreach ($keys as $index => $key) {
                 $reversed[$key] = $values[$index];
             }
-            
+
             $this->array = $reversed;
-            
+
             return $this;
         }
-        
+
         /**
          * Reverse order of loaded array keys
          *
@@ -343,19 +330,18 @@ namespace Zver
         {
             $keys = array_reverse($this->getKeys());
             $values = $this->getValues();
-            
+
             $reversed = [];
-            
-            foreach ($keys as $index => $key)
-            {
+
+            foreach ($keys as $index => $key) {
                 $reversed[$key] = $values[$index];
             }
-            
+
             $this->array = $reversed;
-            
+
             return $this;
         }
-        
+
         /**
          * Return indexed array of keys of loaded array
          *
@@ -365,7 +351,7 @@ namespace Zver
         {
             return array_keys($this->array);
         }
-        
+
         /**
          * Return indexed array of values of loaded array
          *
@@ -375,7 +361,7 @@ namespace Zver
         {
             return array_values($this->array);
         }
-        
+
         /**
          * Return last value from array and removes it from array
          *
@@ -384,17 +370,16 @@ namespace Zver
          */
         public function getLastValueUnset()
         {
-            if ($this->isEmpty())
-            {
+            if ($this->isEmpty()) {
                 throw new EmptyArrayException();
             }
-            
+
             $value = $this->getLastValue();
             unset($this[$this->getLastKey()]);
-            
+
             return $value;
         }
-        
+
         /**
          * Returns true if loaded array have no elements, false otherwise
          *
@@ -404,7 +389,7 @@ namespace Zver
         {
             return (count($this->getValues()) == 0);
         }
-        
+
         /**
          * Get last value of array
          * If called on empty array - exception will be thrown
@@ -413,17 +398,16 @@ namespace Zver
          */
         public function getLastValue()
         {
-            if ($this->isEmpty())
-            {
+            if ($this->isEmpty()) {
                 throw new EmptyArrayException();
             }
-            
+
             $values = $this->getValues();
             $valuesCount = count($values);
-            
+
             return $values[$valuesCount - 1];
         }
-        
+
         /**
          * Get last key of array
          * If called on empty array - exception will be thrown
@@ -432,15 +416,14 @@ namespace Zver
          */
         public function getLastKey()
         {
-            if ($this->isEmpty())
-            {
+            if ($this->isEmpty()) {
                 throw new EmptyArrayException();
             }
-            
+
             return static::load($this->getKeys())
                          ->getLastValue();
         }
-        
+
         /**
          * Return first value of array and removes it from array
          *
@@ -449,17 +432,16 @@ namespace Zver
          */
         public function getFirstValueUnset()
         {
-            if ($this->isEmpty())
-            {
+            if ($this->isEmpty()) {
                 throw new EmptyArrayException();
             }
-            
+
             $value = $this->getFirstValue();
             unset($this[$this->getFirstKey()]);
-            
+
             return $value;
         }
-        
+
         /**
          * Get first value of array
          * If called on empty array - exception will be thrown
@@ -468,17 +450,16 @@ namespace Zver
          */
         public function getFirstValue()
         {
-            if ($this->isEmpty())
-            {
+            if ($this->isEmpty()) {
                 throw new EmptyArrayException();
             }
-            
+
             $values = $this->getValues();
-            
+
             return $values[0];
-            
+
         }
-        
+
         /**
          * Get first key of array
          * If called on empty array - exception will be thrown
@@ -487,16 +468,15 @@ namespace Zver
          */
         public function getFirstKey()
         {
-            if ($this->isEmpty())
-            {
+            if ($this->isEmpty()) {
                 throw new EmptyArrayException();
             }
-            
+
             $keys = $this->getKeys();
-            
+
             return $keys[0];
         }
-        
+
         /**
          * Flip array - keys will be values, values will be keys
          * Swap keys and values
@@ -506,10 +486,10 @@ namespace Zver
         public function flip()
         {
             $this->array = array_flip($this->array);
-            
+
             return $this;
         }
-        
+
         /**
          * Alias for get()
          *
@@ -520,7 +500,7 @@ namespace Zver
         {
             return $this->get();
         }
-        
+
         /**
          * Alias for set()
          *
@@ -534,7 +514,7 @@ namespace Zver
         {
             return $this->set($array);
         }
-        
+
         /**
          * Return loaded array
          *
@@ -544,7 +524,7 @@ namespace Zver
         {
             return $this->array;
         }
-        
+
         /**
          * Alias for count()
          *
@@ -555,7 +535,7 @@ namespace Zver
         {
             return $this->count();
         }
-        
+
         /**
          * Get count of elements in loaded array
          *
@@ -565,7 +545,7 @@ namespace Zver
         {
             return count($this->array);
         }
-        
+
         /**
          * Alias for count()
          *
@@ -576,7 +556,7 @@ namespace Zver
         {
             return $this->count();
         }
-        
+
         /**
          * Alias for count()
          *
@@ -587,7 +567,7 @@ namespace Zver
         {
             return $this->count();
         }
-        
+
         /**
          * Get value at $index
          * Also works fine at associative arrays
@@ -599,23 +579,19 @@ namespace Zver
          */
         public function getAt($index)
         {
-            
-            if ($this->isEmpty())
-            {
+
+            if ($this->isEmpty()) {
                 throw new EmptyArrayException();
             }
-            
+
             $values = $this->getValues();
-            if (isset($values[$index]))
-            {
+            if (isset($values[$index])) {
                 return $values[$index];
-            }
-            else
-            {
+            } else {
                 throw new UndefinedOffsetException();
             }
         }
-        
+
         /**
          * Return array of paths (array of keys) to element of array which key is equals to $key, false otherwise
          * Searching processed all elements recursively
@@ -629,37 +605,31 @@ namespace Zver
         {
             $exists = false;
             $this->walk(
-                function ($keyElement, $element, $path) use (&$exists, &$key, $strict)
-                {
-                    if ($strict && $keyElement === $key || !$strict && $keyElement == $key)
-                    {
-                        if (!is_array($exists))
-                        {
+                function ($keyElement, $element, $path) use (&$exists, &$key, $strict) {
+                    if ($strict && $keyElement === $key || !$strict && $keyElement == $key) {
+                        if (!is_array($exists)) {
                             $exists = [];
                         }
-                        
+
                         $path[] = $key;
-                        
+
                         $exists[] = $path;
                     }
                 }
             );
-            
-            if ($maxDepth > 0 && $exists !== false)
-            {
-                foreach ($exists as $existKey => $exist)
-                {
-                    if (count($exist) > $maxDepth)
-                    {
+
+            if ($maxDepth > 0 && $exists !== false) {
+                foreach ($exists as $existKey => $exist) {
+                    if (count($exist) > $maxDepth) {
                         unset($exists[$existKey]);
                     }
                 }
                 $exists = array_values($exists);
             }
-            
+
             return $exists;
         }
-        
+
         /**
          * Return array of paths (array of keys) to element of array which value is equals to $value, false otherwise
          * Searching processed all elements recursively
@@ -674,37 +644,31 @@ namespace Zver
         {
             $exists = false;
             $this->walk(
-                function ($key, $element, $path) use (&$exists, &$value, $strict)
-                {
-                    if ($strict && $element === $value || !$strict && $element == $value)
-                    {
-                        if (!is_array($exists))
-                        {
+                function ($key, $element, $path) use (&$exists, &$value, $strict) {
+                    if ($strict && $element === $value || !$strict && $element == $value) {
+                        if (!is_array($exists)) {
                             $exists = [];
                         }
-                        
+
                         $path[] = $key;
-                        
+
                         $exists[] = $path;
                     }
                 }
             );
-            
-            if ($maxDepth > 0 && $exists !== false)
-            {
-                foreach ($exists as $existKey => $exist)
-                {
-                    if (count($exist) > $maxDepth)
-                    {
+
+            if ($maxDepth > 0 && $exists !== false) {
+                foreach ($exists as $existKey => $exist) {
+                    if (count($exist) > $maxDepth) {
                         unset($exists[$existKey]);
                     }
                 }
                 $exists = array_values($exists);
             }
-            
+
             return $exists;
         }
-        
+
         /**
          * Replaced all keys in single-demension array with indexes starting from $startIndex
          *
@@ -715,23 +679,19 @@ namespace Zver
         public function convertToIndexed($startIndex = 0)
         {
             $indexed = [];
-            foreach ($this->array as $item)
-            {
-                if (empty($indexed))
-                {
+            foreach ($this->array as $item) {
+                if (empty($indexed)) {
                     $indexed[$startIndex] = $item;
-                }
-                else
-                {
+                } else {
                     $indexed[] = $item;
                 }
             }
-            
+
             $this->array = $indexed;
-            
+
             return $this;
         }
-        
+
         /**
          * Split array to $numberOfParts parts
          *
@@ -741,24 +701,23 @@ namespace Zver
          */
         public function splitParts($numberOfParts)
         {
-            
+
             $partition = [];
             $offset = $sliceLength = 0;
             $partsLength = floor(count($this->array) / $numberOfParts);
             $partsRest = count($this->array) % $numberOfParts;
-            
-            for ($countIndex = 0; $countIndex < $numberOfParts; $countIndex++)
-            {
+
+            for ($countIndex = 0; $countIndex < $numberOfParts; $countIndex++) {
                 $sliceLength = ($countIndex < $partsRest)
                     ? $partsLength + 1
                     : $partsLength;
                 $partition[$countIndex] = array_slice($this->array, $offset, $sliceLength);
                 $offset += $sliceLength;
             }
-            
+
             return $this->set($partition);
         }
-        
+
         /**
          * Implementation of IteratorAggregade
          *
@@ -768,7 +727,7 @@ namespace Zver
         {
             return new \ArrayIterator($this->array);
         }
-        
+
         /**
          * Implementation of ArrayAccess
          *
@@ -780,7 +739,7 @@ namespace Zver
         {
             return isset($this->array[$offset]);
         }
-        
+
         /**
          * @param mixed $offset
          *
@@ -794,7 +753,7 @@ namespace Zver
                 ? $this->array[$offset]
                 : null;
         }
-        
+
         /**
          * Implementation of ArrayAccess
          *
@@ -803,16 +762,13 @@ namespace Zver
          */
         public function offsetSet($offset, $value)
         {
-            if (is_null($offset))
-            {
+            if (is_null($offset)) {
                 $this->array[] = $value;
-            }
-            else
-            {
+            } else {
                 $this->array[$offset] = $value;
             }
         }
-        
+
         /**
          * Implementation of ArrayAccess
          *
@@ -822,7 +778,7 @@ namespace Zver
         {
             unset($this->array[$offset]);
         }
-        
+
         /**
          * Apply callback to every element of loaded array.
          * Keys preserved.
@@ -834,14 +790,13 @@ namespace Zver
          */
         public function map($callback)
         {
-            foreach ($this->array as $key => $value)
-            {
+            foreach ($this->array as $key => $value) {
                 $this->array[$key] = $callback($key, $value);
             }
-            
+
             return $this;
         }
-        
+
         /**
          * Apply callback to every element of loaded array, if callback returns false - element with key will be unset.
          * Keys preserved.
@@ -853,17 +808,15 @@ namespace Zver
          */
         public function filter($callback)
         {
-            foreach ($this->array as $key => $value)
-            {
-                if ($callback($key, $value) === false)
-                {
+            foreach ($this->array as $key => $value) {
+                if ($callback($key, $value) === false) {
                     unset($this->array[$key]);
                 }
             }
-            
+
             return $this;
         }
-        
+
         /**
          * Get only one key column from multi-dimensional array
          *
@@ -874,26 +827,22 @@ namespace Zver
         public function column($column)
         {
             $columnArray = [];
-            
-            foreach ($this->array as $values)
-            {
-                if (is_array($values))
-                {
-                    
-                    foreach ($values as $key => $value)
-                    {
-                        if ($key == $column)
-                        {
+
+            foreach ($this->array as $values) {
+                if (is_array($values)) {
+
+                    foreach ($values as $key => $value) {
+                        if ($key == $column) {
                             $columnArray[] = $value;
                         }
                     }
                 }
             }
-            
+
             return $this->setArray($columnArray)
                         ->setArray($this->getValues());
         }
-        
+
         /**
          * Insert element into beginning of array
          *
@@ -905,7 +854,7 @@ namespace Zver
         {
             return $this->setArray(array_merge([$element], $this->array));
         }
-        
+
         /**
          * Insert element into end of array
          *
@@ -916,10 +865,10 @@ namespace Zver
         public function insertLast($element)
         {
             $this->array[] = $element;
-            
+
             return $this;
         }
-        
+
         /**
          * Get $length number of elements started from $offset
          *
@@ -931,64 +880,58 @@ namespace Zver
         public function slice($offset, $length)
         {
             $this->array = array_slice($this->array, $offset, $length, true);
-            
+
             return $this;
         }
-        
+
         public function sliceFromCenter($centerIndex, $itemsPerSide)
         {
             $itemsPerSide = intval($itemsPerSide);
-            
+
             /**
              * Check items per side is correct
              */
-            if ($itemsPerSide < 1)
-            {
-                throw new Exception('Items per side must be >=1 ');
+            if ($itemsPerSide < 1) {
+                throw new \Exception('Items per side must be >=1 ');
             }
-            
+
             /**
              * Check center index is exists
              */
-            if (!$this->isKeyExists($centerIndex))
-            {
-                throw new Exception('Center index="' . $centerIndex . '" is not exists');
+            if (!$this->isKeyExists($centerIndex)) {
+                throw new \Exception('Center index="' . $centerIndex . '" is not exists');
             }
-            
+
             /**
              * Check slice is needed
              */
-            if ($this->length() > $itemsPerSide + $itemsPerSide + 1)
-            {
-                
+            if ($this->length() > $itemsPerSide + $itemsPerSide + 1) {
+
                 $sliceStart = $centerIndex;
                 $sliceEnd = $centerIndex;
-                
+
                 $availableSpace = $itemsPerSide + $itemsPerSide;
                 $currentInc = 1;
-                
-                while ($availableSpace > 0)
-                {
-                    if ($this->isKeyExists($centerIndex + $currentInc))
-                    {
+
+                while ($availableSpace > 0) {
+                    if ($this->isKeyExists($centerIndex + $currentInc)) {
                         $availableSpace--;
                         $sliceEnd++;
                     }
-                    
-                    if ($this->isKeyExists($centerIndex - $currentInc))
-                    {
+
+                    if ($this->isKeyExists($centerIndex - $currentInc)) {
                         $availableSpace--;
                         $sliceStart--;
                     }
-                    
+
                     $currentInc++;
                 }
-                
+
                 return $this->slice($sliceStart, $sliceEnd - $sliceStart + 1)
                             ->convertToIndexed();
-                
+
             }
-            
+
             return $this;
         }
     }

@@ -1,9 +1,8 @@
 <?php
-namespace Zver\Exceptions\ArrayHelper
-{
-    
+namespace Zver\Exceptions\ArrayHelper {
+
     class EmptyArrayException extends \Exception
     {
-        
+
     }
 }
