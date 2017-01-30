@@ -787,7 +787,7 @@ namespace Zver {
         public function map($callback)
         {
             foreach ($this->array as $key => $value) {
-                $this->array[$key] = $callback($key, $value);
+                $this->array[$key] = $callback($value, $key);
             }
 
             return $this;

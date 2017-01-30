@@ -1817,4 +1817,127 @@ class ArrayHelperTest extends PHPUnit\Framework\TestCase
 
     }
 
+    public function testExplode()
+    {
+        $this->foreachSame([
+                               [
+                                   ArrayHelper::explode(' ', 'e x p l o d e')
+                                              ->get(),
+                                   [
+                                       'e',
+                                       'x',
+                                       'p',
+                                       'l',
+                                       'o',
+                                       'd',
+                                       'e',
+                                   ],
+                               ],
+                               [
+                                   ArrayHelper::explode(' ', 'e x p l  o d e')
+                                              ->get(),
+                                   [
+                                       'e',
+                                       'x',
+                                       'p',
+                                       'l',
+                                       '',
+                                       'o',
+                                       'd',
+                                       'e',
+                                   ],
+                               ],
+                           ]);
+    }
+
+    public function testCombine()
+    {
+        $keys = [
+            'XL',
+            'L',
+            'S',
+            'M',
+            'XS',
+        ];
+
+        $values = [
+            '1200',
+            '700',
+            '670',
+            '450',
+            '300',
+            '',
+        ];
+
+        $combined = [
+            "XL" => '1200',
+            "L"  => '700',
+            "S"  => '670',
+            "M"  => '450',
+            "XS" => '300',
+        ];
+
+        $this->foreachSame([
+                               [
+                                   ArrayHelper::combine($keys, $values)
+                                              ->get(),
+                                   $combined,
+                               ],
+                           ]);
+    }
+
+    public function testMap()
+    {
+        $this->foreachSame([
+                               [
+                                   ArrayHelper::load([1, 2, 3])
+                                              ->map(function ($value) {
+                                                  return $value + $value;
+                                              })
+                                              ->get(),
+                                   [2, 4, 6],
+                               ],
+                               [
+                                   ArrayHelper::load([1, 2, 3])
+                                              ->map(function ($value) {
+                                                  return $value * 3;
+                                              })
+                                              ->get(),
+                                   [3, 6, 9],
+                               ],
+                               [
+                                   ArrayHelper::load([1, 2, 3])
+                                              ->map(function ($value, $key) {
+                                                  return $value * 3;
+                                              })
+                                              ->get(),
+                                   [3, 6, 9],
+                               ],
+                               [
+                                   ArrayHelper::load([])
+                                              ->map(function ($value) {
+                                                  return $value * 3;
+                                              })
+                                              ->get(),
+                                   [],
+                               ],
+                               [
+                                   ArrayHelper::load([])
+                                              ->map(function ($value, $key) {
+                                                  return $value * 3;
+                                              })
+                                              ->get(),
+                                   [],
+                               ],
+                               [
+                                   ArrayHelper::load([1 => 1, 6 => 6, 9 => 9])
+                                              ->map(function ($value, $key) {
+                                                  return $key * $value;
+                                              })
+                                              ->get(),
+                                   [1 => 1, 6 => 36, 9 => 81],
+                               ],
+                           ]);
+    }
+
 }
