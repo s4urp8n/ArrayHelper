@@ -579,7 +579,6 @@ namespace Zver {
          */
         public function getAt($index)
         {
-
             if ($this->isEmpty()) {
                 throw new EmptyArrayException();
             }
@@ -701,7 +700,6 @@ namespace Zver {
          */
         public function splitParts($numberOfParts)
         {
-
             $partition = [];
             $offset = $sliceLength = 0;
             $partsLength = floor(count($this->array) / $numberOfParts);
@@ -749,9 +747,7 @@ namespace Zver {
          */
         public function offsetGet($offset)
         {
-            return isset($this->array[$offset])
-                ? $this->array[$offset]
-                : null;
+            return isset($this->array[$offset]) ? $this->array[$offset] : null;
         }
 
         /**
@@ -830,7 +826,6 @@ namespace Zver {
 
             foreach ($this->array as $values) {
                 if (is_array($values)) {
-
                     foreach ($values as $key => $value) {
                         if ($key == $column) {
                             $columnArray[] = $value;
