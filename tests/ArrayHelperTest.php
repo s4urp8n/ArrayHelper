@@ -1940,4 +1940,44 @@ class ArrayHelperTest extends PHPUnit\Framework\TestCase
                            ]);
     }
 
+    public function testLEaveOnly()
+    {
+
+        $test = [
+            'o' => 1,
+            't' => 2,
+            'f' => 3,
+            't' => 4,
+        ];
+
+        $this->assertSame(
+            ArrayHelper::load($test)
+                       ->leaveOnlyKey('o')
+                       ->get(),
+            ['o' => 1]
+        );
+
+        $this->assertSame(
+            ArrayHelper::load($test)
+                       ->leaveOnlyKey('dsdsd')
+                       ->get(),
+            []
+        );
+
+        $this->assertSame(
+            ArrayHelper::load($test)
+                       ->leaveOnlyValue(1)
+                       ->get(),
+            ['o' => 1]
+        );
+
+        $this->assertSame(
+            ArrayHelper::load($test)
+                       ->leaveOnlyValue(11)
+                       ->get(),
+            []
+        );
+
+    }
+
 }

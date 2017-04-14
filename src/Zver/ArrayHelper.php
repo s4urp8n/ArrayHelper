@@ -929,5 +929,27 @@ namespace Zver {
 
             return $this;
         }
+
+        public function leaveOnlyKey($key)
+        {
+            foreach ($this->array as $k => $v) {
+                if ($k != $key) {
+                    unset($this->array[$k]);
+                }
+            }
+
+            return $this;
+        }
+
+        public function leaveOnlyValue($value)
+        {
+            foreach ($this->array as $k => $v) {
+                if ($v != $value) {
+                    unset($this->array[$k]);
+                }
+            }
+
+            return $this;
+        }
     }
 }
