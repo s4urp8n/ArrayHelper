@@ -1952,28 +1952,47 @@ class ArrayHelperTest extends PHPUnit\Framework\TestCase
 
         $this->assertSame(
             ArrayHelper::load($test)
-                       ->leaveOnlyKey('o')
+                       ->leaveOnlyKeys('o')
                        ->get(),
             ['o' => 1]
         );
 
         $this->assertSame(
             ArrayHelper::load($test)
-                       ->leaveOnlyKey('dsdsd')
+                       ->leaveOnlyKeys(['o', 't'])
+                       ->get(),
+            [
+                'o' => 1,
+                't' => 4,
+            ]
+        );
+
+        $this->assertSame(
+            ArrayHelper::load($test)
+                       ->leaveOnlyKeys('dsdsd')
                        ->get(),
             []
         );
 
         $this->assertSame(
             ArrayHelper::load($test)
-                       ->leaveOnlyValue(1)
+                       ->leaveOnlyValues(1)
                        ->get(),
             ['o' => 1]
+        );
+        $this->assertSame(
+            ArrayHelper::load($test)
+                       ->leaveOnlyValues([1, 3])
+                       ->get(),
+            [
+                'o' => 1,
+                'f' => 3,
+            ]
         );
 
         $this->assertSame(
             ArrayHelper::load($test)
-                       ->leaveOnlyValue(11)
+                       ->leaveOnlyValues(11)
                        ->get(),
             []
         );

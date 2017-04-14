@@ -930,10 +930,15 @@ namespace Zver {
             return $this;
         }
 
-        public function leaveOnlyKey($key)
+        public function leaveOnlyKeys($keys)
         {
+
+            if (!is_array($keys)) {
+                $keys = [$keys];
+            }
+
             foreach ($this->array as $k => $v) {
-                if ($k != $key) {
+                if (!in_array($k, $keys)) {
                     unset($this->array[$k]);
                 }
             }
@@ -941,10 +946,15 @@ namespace Zver {
             return $this;
         }
 
-        public function leaveOnlyValue($value)
+        public function leaveOnlyValues($values)
         {
+
+            if (!is_array($values)) {
+                $values = [$values];
+            }
+
             foreach ($this->array as $k => $v) {
-                if ($v != $value) {
+                if (!in_array($v, $values)) {
                     unset($this->array[$k]);
                 }
             }
