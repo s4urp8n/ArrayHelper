@@ -56,7 +56,7 @@ class ArrayHelperTest extends PHPUnit\Framework\TestCase
     public $empty = [];
     public $multi = [];
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->assoc = static::$assocArray;
         $this->auto = static::$autoArray;

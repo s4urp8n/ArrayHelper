@@ -1,7 +1,7 @@
 {
   "name": "zver/array-helper",
   "description": "this is universal package template for development and testing",
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "config": {
     "optimize-autoloader": true
   },
@@ -19,6 +19,7 @@
     }
   },
   "require": {
+    "phpunit/phpunit": "^8.5"
   },
   "require-dev": {
   }
